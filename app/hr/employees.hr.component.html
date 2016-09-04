@@ -1,0 +1,998 @@
+<div class="col-md-10">
+    <div class="box  collapsed-box">
+        <div class="box-header">
+            <div class="row">
+                <div class="col-md-1">
+                    <a href="#" title="新增员工"><i class="fa fa-3x fa-plus-square"></i></a>
+                </div>
+                <div class="col-md-10">
+                    <div class="input-group input-group-lg">
+                        <span class="input-group-addon">
+                                                    <i class="fa fa-search"></i>
+                                                </span>
+                        <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" />
+                        <div class="input-group-btn">
+                            <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> 导出</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-placement="bottom" data-toggle="tooltip" title="高级搜索">
+                                            <i class="fa fa-3x  fa-angle-double-down"></i>
+                                        </button>
+                </div>
+            </div>
+        </div>
+        <div class="box-body">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <div class="form-inline">
+                        <label class="control-label">
+                                                入职时间：
+                                            </label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" /> ----
+                            <input type="text" class="form-control" />
+                        </div>
+                        <div class="form-group">
+                            <div class="checkbox">
+                                <label>
+                                                        <input type="checkbox" /> 只看在职
+                                                    </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table table-responsive table-hover" id="staff-table">
+                    <thead>
+                        <tr>
+                            <th>姓名</th>
+                            <th>邮箱</th>
+                            <th>手机</th>
+                            <th>职务</th>
+                            <th>部门</th>
+                            <th>入职时间</th>
+                            <th>入职状态</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>周子濠</td>
+                            <td>ziha.zhou@goodhopevisa.com</td>
+                            <td>15011052050</td>
+                            <td>软件工程师</td>
+                            <td>IT服务部</td>
+                            <td>2016年7月1日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>傅冰</td>
+                            <td>bing.fu@goodhopevisa.com</td>
+                            <td>1864231125</td>
+                            <td>IT经理</td>
+                            <td>IT服务部</td>
+                            <td>2016年2月1日</td>
+                            <td><span class="label label-success">转正</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>李白</td>
+                            <td>bai.li@goodhopevisa.com</td>
+                            <td>13677846512</td>
+                            <td>招聘专员</td>
+                            <td>人力资源部</td>
+                            <td>2014年3月2日</td>
+                            <td><span class="label label-default">离职</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>张勇</td>
+                            <td>yong.zhang@goodhopevisa.com</td>
+                            <td>17636412358</td>
+                            <td>架构师</td>
+                            <td>IT服务部</td>
+                            <td>2016年8月22日</td>
+                            <td><span class="label label-warning">试用期</span></td>
+                            <td>
+                                <div class="btn-group">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            操作 <span class="caret"></span>
+                                                        </a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
+                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
+                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
+                                    </ul>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.col -->

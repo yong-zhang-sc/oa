@@ -1,0 +1,9 @@
+﻿html, body { font-family: 'Microsoft YaHei','Microsoft YaHei UI'; }
+
+
+.form-table { font-size: 16px; border-left: #ccc solid 1px; border-bottom: #ccc solid 1px; width: 100%; }
+    .form-table caption { background-color: #000000; font-size: 20px; font-weight: bold; color: white; text-align: center; }
+    .form-table td,th { border-color: #000000; border-width: 2px; vertical-align: middle; padding-top: 22px; padding-bottom: 22px; padding-right: 10px; padding-left: 10px; border-right: #ccc solid 1px; border-top: #ccc solid 1px; min-width: 100px; }
+
+        .form-table td.title { font-weight: bold; width: 150px; text-align: center; }
+    .form-table.edit input[type=text] { border-width:0px;border-bottom:1px solid #ccc;font-size:16px; }

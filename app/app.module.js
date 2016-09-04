@@ -13,9 +13,12 @@ var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
 var login_component_1 = require('./login.component');
-var home_module_1 = require('./home.module');
-// import {HeaderComponent} from './home/header.component';
-// import {SidebarComponent} from './home/sidebar.component';
+var home_component_1 = require('./home/home.component');
+var header_component_1 = require('./home/header.component');
+var sidebar_component_1 = require('./home/sidebar.component');
+var footer_component_1 = require('./home/footer.component');
+var dashboard_component_1 = require('./dashboard/dashboard.component');
+var hr_module_1 = require('./hr/hr.module');
 var app_routing_1 = require('./app.routing');
 var login_service_1 = require('./login.service');
 var AppModule = (function () {
@@ -23,8 +26,15 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, home_module_1.HomeModule, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent, login_component_1.LoginComponent],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, hr_module_1.HRModule],
+            declarations: [app_component_1.AppComponent,
+                login_component_1.LoginComponent,
+                home_component_1.HomeComponent,
+                header_component_1.HeaderComponent,
+                sidebar_component_1.SidebarComponent,
+                footer_component_1.FooterComponent,
+                dashboard_component_1.DashboardComponent
+            ],
             bootstrap: [app_component_1.AppComponent],
             providers: [login_service_1.LoginService]
         }), 

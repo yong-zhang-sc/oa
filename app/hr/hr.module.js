@@ -21,7 +21,7 @@ var employeeWorkExperience_hr_component_1 = require('./employeeWorkExperience.hr
 var employeeTraining_hr_component_1 = require('./employeeTraining.hr.component');
 var employeeContract_hr_component_1 = require('./employeeContract.hr.component');
 var employeeSkills_hr_component_1 = require('./employeeSkills.hr.component');
-var hr_routing_1 = require('./hr.routing');
+// import { hrRouting } from './hr.routing';
 var HRModule = (function () {
     function HRModule() {
     }
@@ -30,8 +30,7 @@ var HRModule = (function () {
             imports: [
                 common_1.CommonModule,
                 forms_1.FormsModule,
-                http_1.HttpModule,
-                hr_routing_1.hrRouting
+                http_1.HttpModule
             ],
             declarations: [
                 hr_component_1.HRComponent,

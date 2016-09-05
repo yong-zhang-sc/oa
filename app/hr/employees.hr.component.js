@@ -9,15 +9,30 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var employee_service_1 = require('./employee.service');
+var communication_service_1 = require('../communication.service');
 var EmployeeListComponent = (function () {
-    function EmployeeListComponent() {
+    function EmployeeListComponent(_employeeService, _communicationService) {
+        this._employeeService = _employeeService;
+        this._communicationService = _communicationService;
+        this.keyword = '';
     }
+    EmployeeListComponent.prototype.ngOnInit = function () {
+        this._employeeService.getEmployeeList().subscribe((function (res) {
+            console.log(res);
+            this._employeeList = res;
+        }).bind(this));
+    };
+    EmployeeListComponent.prototype.selectEmployee = function (employee) {
+        console.log('announcing ' + JSON.stringify(employee));
+        this._communicationService.announceEmployeeChanged(employee);
+    };
     EmployeeListComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',
             templateUrl: './app/hr/employees.hr.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [employee_service_1.EmployeeService, communication_service_1.CommunicationService])
     ], EmployeeListComponent);
     return EmployeeListComponent;
 }());

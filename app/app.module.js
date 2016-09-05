@@ -18,25 +18,47 @@ var header_component_1 = require('./home/header.component');
 var sidebar_component_1 = require('./home/sidebar.component');
 var footer_component_1 = require('./home/footer.component');
 var dashboard_component_1 = require('./dashboard/dashboard.component');
-var hr_module_1 = require('./hr/hr.module');
+var hr_component_1 = require('./hr/hr.component');
+var profile_hr_component_1 = require('./hr/profile.hr.component');
+var employees_hr_component_1 = require('./hr/employees.hr.component');
+var employeeOverview_hr_component_1 = require('./hr/employeeOverview.hr.component');
+var employeeEducation_hr_component_1 = require('./hr/employeeEducation.hr.component');
+var employeeWorkExperience_hr_component_1 = require('./hr/employeeWorkExperience.hr.component');
+var employeeTraining_hr_component_1 = require('./hr/employeeTraining.hr.component');
+var employeeContract_hr_component_1 = require('./hr/employeeContract.hr.component');
+var employeeSkills_hr_component_1 = require('./hr/employeeSkills.hr.component');
+var filterByKeyword_pipe_1 = require('./hr/filterByKeyword.pipe');
+// import {HRModule} from './hr/hr.module';
 var app_routing_1 = require('./app.routing');
+var communication_service_1 = require('./communication.service');
 var login_service_1 = require('./login.service');
+var employee_service_1 = require('./hr/employee.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, hr_module_1.HRModule],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule],
             declarations: [app_component_1.AppComponent,
                 login_component_1.LoginComponent,
                 home_component_1.HomeComponent,
                 header_component_1.HeaderComponent,
                 sidebar_component_1.SidebarComponent,
                 footer_component_1.FooterComponent,
-                dashboard_component_1.DashboardComponent
+                dashboard_component_1.DashboardComponent,
+                hr_component_1.HRComponent,
+                profile_hr_component_1.EmployeeProfileComponent,
+                employees_hr_component_1.EmployeeListComponent,
+                employeeOverview_hr_component_1.EmployeeOverviewComponent,
+                employeeEducation_hr_component_1.EmployeeEducationComponent,
+                employeeWorkExperience_hr_component_1.EmployeeWorkExperienceComponent,
+                employeeTraining_hr_component_1.EmployeeTrainingComponent,
+                employeeContract_hr_component_1.EmployeeContractComponent,
+                employeeSkills_hr_component_1.EmployeeSkillsComponent,
+                filterByKeyword_pipe_1.FilterByKeywordsPipe
             ],
             bootstrap: [app_component_1.AppComponent],
-            providers: [login_service_1.LoginService]
+            providers: [login_service_1.LoginService, employee_service_1.EmployeeService, communication_service_1.CommunicationService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

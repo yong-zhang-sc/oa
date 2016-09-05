@@ -12,14 +12,14 @@ import { EmployeeWorkExperienceComponent} from './employeeWorkExperience.hr.comp
 import { EmployeeTrainingComponent} from './employeeTraining.hr.component';
 import { EmployeeContractComponent } from './employeeContract.hr.component';
 import { EmployeeSkillsComponent } from './employeeSkills.hr.component';
-import { hrRouting } from './hr.routing';
+// import { hrRouting } from './hr.routing';
 
 @NgModule({
     imports: [
         CommonModule,
         FormsModule,
-        HttpModule,
-        hrRouting
+        HttpModule
+        // hrRouting
     ],
     declarations: [
         HRComponent,

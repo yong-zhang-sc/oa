@@ -13,20 +13,19 @@ var router_1 = require('@angular/router');
 var login_service_1 = require('./login.service');
 var LoginComponent = (function () {
     function LoginComponent(router, service) {
-        this.router = router;
         this.service = service;
+        this.router = router;
     }
-    LoginComponent.prototype.login = function (email, password) {
-        console.log(email + ' ' + password);
-        // this.service.login(email, password).subscribe(result => console.log(result));
-        // this.service.login(email, password).then(function (res) {
-        //     console.log(res);
-        //     this.router.navigate(['/home']);
-        // });
-        var result = this.service.login(email, password);
-        if (result.success == true) {
-            this.router.navigate(['/home']);
-        }
+    LoginComponent.prototype.login = function (account, password) {
+        var result = this.service.login(account, password).subscribe((function (res) {
+            console.log(res);
+            if (res.valid) {
+                this.router.navigate(['/home']);
+            }
+            else {
+                alert(res.message);
+            }
+        }).bind(this));
     };
     LoginComponent = __decorate([
         core_1.Component({

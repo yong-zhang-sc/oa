@@ -1,27 +1,34 @@
 import { Injectable } from '@angular/core';
 import { Headers, Http, Response, RequestOptions } from '@angular/http';
-import { Config } from './app.config';
+import { Config } from '../app.config';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 
 
 @Injectable()
-export class LoginService {
+export class EmployeeService {
 
     constructor(private http: Http) {
 
     }
 
-    login(account: string, password: string) {
-
-        var url = Config.url + `api/account/login`;
+    getEmployeeList() {
+        var url = Config.url + `api/staff/staffs`;
 
         console.log(url);
 
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.post(url, { Account: account, Password: password }, options).map(res => res.json() );
+        return this.http.get(url, options).map(function(res, idx){
+          return res.json();  
+        });
+
+    }
+
+    getEmployeeById(Id : Number){
+
+        // todo
 
     }
 }

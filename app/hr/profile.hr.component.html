@@ -1,6 +1,6 @@
 <div class="col-md-2">
     <!-- Profile Image -->
-    <!--<div class="box box-primary">
+    <div class="box box-primary" *ngIf="!selectedEmployee">
         <div class="box-body">
             <img class="profile-user-img img-responsive" src="/content/Images/avatar_default.jpg" alt="User profile picture">
 
@@ -9,11 +9,11 @@
             </h5>
         </div>
         <!-- /.box-body -->
-    <!--</div>-->
+    </div>
     <!-- /.box -->
 
     <!-- Profile Image -->
-    <div class="box box-primary">
+    <div class="box box-primary" *ngIf="selectedEmployee">
         <div class="box-body">
             <img class="profile-user-img img-responsive" src="../Images/樱木花道.jpg" alt="周子濠">
 
@@ -45,7 +45,7 @@
         <!-- /.box-body -->
     </div>
     <!-- /.box -->
-    <div class="box box-warning">
+    <div class="box box-warning" *ngIf="selectedEmployee">
         <div class="box-body">
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><a routerLink="overview">基本信息</a></li>

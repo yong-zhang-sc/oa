@@ -1,26 +1,36 @@
-"use strict";
-var router_1 = require('@angular/router');
-var hr_component_1 = require('./hr.component');
-var employees_hr_component_1 = require('./employees.hr.component');
-var employeeOverview_hr_component_1 = require('./employeeOverview.hr.component');
-var employeeEducation_hr_component_1 = require('./employeeEducation.hr.component');
-var employeeWorkExperience_hr_component_1 = require('./employeeWorkExperience.hr.component');
-var employeeTraining_hr_component_1 = require('./employeeTraining.hr.component');
-var employeeContract_hr_component_1 = require('./employeeContract.hr.component');
-var employeeSkills_hr_component_1 = require('./employeeSkills.hr.component');
-var hrRoutes = [
-    {
-        path: 'home/hr', component: hr_component_1.HRComponent, children: [
-            { path: '', redirectTo: 'employees' },
-            { path: 'employees', component: employees_hr_component_1.EmployeeListComponent },
-            { path: 'overview', component: employeeOverview_hr_component_1.EmployeeOverviewComponent },
-            { path: 'education', component: employeeEducation_hr_component_1.EmployeeEducationComponent },
-            { path: 'workExperience', component: employeeWorkExperience_hr_component_1.EmployeeWorkExperienceComponent },
-            { path: 'training', component: employeeTraining_hr_component_1.EmployeeTrainingComponent },
-            { path: 'contract', component: employeeContract_hr_component_1.EmployeeContractComponent },
-            { path: 'skills', component: employeeSkills_hr_component_1.EmployeeSkillsComponent }
-        ]
-    }
-];
-exports.hrRouting = router_1.RouterModule.forChild(hrRoutes);
+// import { ModuleWithProviders }  from '@angular/core';
+// import { Routes, RouterModule } from '@angular/router';
+// import { HRComponent }  from './hr.component';
+// import { EmployeeListComponent} from './employees.hr.component';
+// import { EmployeeOverviewComponent} from './employeeOverview.hr.component';
+// import { EmployeeEducationComponent} from './employeeEducation.hr.component';
+// import { EmployeeWorkExperienceComponent} from './employeeWorkExperience.hr.component';
+// import { EmployeeTrainingComponent } from './employeeTraining.hr.component';
+// import { EmployeeContractComponent } from './employeeContract.hr.component';
+// import { EmployeeSkillsComponent } from './employeeSkills.hr.component';
+// // const hrRoutes: Routes = [
+// //     { path: '', redirectTo: 'employees',pathMatch : 'prefix' },
+// //     { path: 'employees', component: EmployeeListComponent },
+// //     { path: 'overview', component: EmployeeOverviewComponent },
+// //     { path: 'education', component: EmployeeEducationComponent },
+// //     { path: 'workExperience', component: EmployeeWorkExperienceComponent },
+// //     { path: 'training', component: EmployeeTrainingComponent },
+// //     { path: 'contract', component: EmployeeContractComponent },
+// //     { path: 'skills', component: EmployeeSkillsComponent }
+// // ];
+// const hrRoutes: Routes = [
+//     {
+//         path: 'hr', component: HRComponent, children: [
+//             { path: '', redirectTo: 'employees',  pathMatch : 'full'},
+//             { path: 'employees', component: EmployeeListComponent },
+//             { path: 'overview', component: EmployeeOverviewComponent },
+//             { path: 'education', component: EmployeeEducationComponent },
+//             { path: 'workExperience', component: EmployeeWorkExperienceComponent },
+//             { path: 'training', component: EmployeeTrainingComponent },
+//             { path: 'contract', component: EmployeeContractComponent },
+//             { path: 'skills', component: EmployeeSkillsComponent }
+//         ]
+//     }
+// ];
+// export const hrRouting: ModuleWithProviders = RouterModule.forChild(hrRoutes); 
 //# sourceMappingURL=hr.routing.js.map

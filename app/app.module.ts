@@ -10,24 +10,49 @@ import { SidebarComponent} from './home/sidebar.component';
 import { FooterComponent} from './home/footer.component';
 import { DashboardComponent} from './dashboard/dashboard.component';
 
-import {HRModule} from './hr/hr.module';
+
+
+import { HRComponent } from './hr/hr.component';
+import { EmployeeProfileComponent} from './hr/profile.hr.component';
+import { EmployeeListComponent} from './hr/employees.hr.component';
+import { EmployeeOverviewComponent} from './hr/employeeOverview.hr.component';
+import { EmployeeEducationComponent} from './hr/employeeEducation.hr.component';
+import { EmployeeWorkExperienceComponent} from './hr/employeeWorkExperience.hr.component';
+import { EmployeeTrainingComponent} from './hr/employeeTraining.hr.component';
+import { EmployeeContractComponent } from './hr/employeeContract.hr.component';
+import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
+import { FilterByKeywordsPipe } from './hr/filterByKeyword.pipe';
+
+
+// import {HRModule} from './hr/hr.module';
 
 import { routing } from './app.routing';
 
-
+import { CommunicationService } from './communication.service';
 import {LoginService} from './login.service';
+import {EmployeeService } from './hr/employee.service';
 
 @NgModule({
-  imports: [BrowserModule, routing, HttpModule, HRModule],
+  imports: [BrowserModule, routing, HttpModule],
   declarations: [AppComponent,
     LoginComponent,
     HomeComponent,
     HeaderComponent,
     SidebarComponent,
     FooterComponent,
-    DashboardComponent
+    DashboardComponent,
+    HRComponent,
+    EmployeeProfileComponent,
+    EmployeeListComponent,
+    EmployeeOverviewComponent,
+    EmployeeEducationComponent,
+    EmployeeWorkExperienceComponent,
+    EmployeeTrainingComponent,
+    EmployeeContractComponent,
+    EmployeeSkillsComponent,
+    FilterByKeywordsPipe
   ],
   bootstrap: [AppComponent],
-  providers: [LoginService]
+  providers: [LoginService,EmployeeService,CommunicationService]
 })
 export class AppModule { }

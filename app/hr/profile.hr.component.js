@@ -9,15 +9,24 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var employee_service_1 = require('./employee.service');
+var communication_service_1 = require('../communication.service');
 var EmployeeProfileComponent = (function () {
-    function EmployeeProfileComponent() {
+    function EmployeeProfileComponent(employeeService, _communicationService) {
+        this.employeeService = employeeService;
+        this._communicationService = _communicationService;
+        this.selectedEmployee = null;
+        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employee) {
+            this.selectedEmployee = employee;
+            // this._router.navigate(['../overview']);
+        }).bind(this));
     }
     EmployeeProfileComponent = __decorate([
         core_1.Component({
             selector: 'employee-profile',
             templateUrl: './app/hr/profile.hr.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [employee_service_1.EmployeeService, communication_service_1.CommunicationService])
     ], EmployeeProfileComponent);
     return EmployeeProfileComponent;
 }());

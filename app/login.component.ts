@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService} from './login.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -13,28 +14,26 @@ import { LoginService} from './login.service';
 })
 export class LoginComponent {
 
+    public router: Router;
 
-    constructor(private router: Router, private service: LoginService) {
+    constructor(router: Router, private service: LoginService) {
+        this.router = router;
     }
 
-    login(email: string, password: string) {
+    login(account: string, password: string) {
 
+        var result = this.service.login(account, password).subscribe((function (res: any) {
+            console.log(res);
 
-        console.log(email + ' ' + password);
+            if (res.valid) {
+                this.router.navigate(['/home']);
+            }
+            else {
+                alert(res.message);
+            }
 
-        // this.service.login(email, password).subscribe(result => console.log(result));
-        // this.service.login(email, password).then(function (res) {
-        //     console.log(res);
-
-        //     this.router.navigate(['/home']);
-
-        // });
-
-        var result = this.service.login(email, password);
-
-        if (result.success == true) {
-            this.router.navigate(['/home']);
-        }
+        }).bind(this)
+        );
 
 
     }

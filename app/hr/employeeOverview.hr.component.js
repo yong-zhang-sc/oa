@@ -9,15 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var router_1 = require('@angular/router');
+var employee_service_1 = require('./employee.service');
 var EmployeeOverviewComponent = (function () {
-    function EmployeeOverviewComponent() {
+    function EmployeeOverviewComponent(route, router, _employeeService) {
+        this.route = route;
+        this.router = router;
+        this._employeeService = _employeeService;
+        this.employee = null;
     }
+    EmployeeOverviewComponent.prototype.ngOnInit = function () {
+        this.route.params.subscribe(function (params) {
+            var id = +params['id']; // (+) converts string 'id' to a number
+        });
+    };
     EmployeeOverviewComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',
             templateUrl: './app/hr/employeeOverview.hr.component.html'
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, employee_service_1.EmployeeService])
     ], EmployeeOverviewComponent);
     return EmployeeOverviewComponent;
 }());

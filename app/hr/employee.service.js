@@ -10,24 +10,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var app_config_1 = require('./app.config');
+var app_config_1 = require('../app.config');
 require('rxjs/add/operator/map');
-var LoginService = (function () {
-    function LoginService(http) {
+var EmployeeService = (function () {
+    function EmployeeService(http) {
         this.http = http;
     }
-    LoginService.prototype.login = function (account, password) {
-        var url = app_config_1.Config.url + "api/account/login";
+    EmployeeService.prototype.getEmployeeList = function () {
+        var url = app_config_1.Config.url + "api/staff/staffs";
         console.log(url);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post(url, { Account: account, Password: password }, options).map(function (res) { return res.json(); });
+        return this.http.get(url, options).map(function (res, idx) {
+            return res.json();
+        });
     };
-    LoginService = __decorate([
+    EmployeeService.prototype.getEmployeeById = function (Id) {
+        // todo
+    };
+    EmployeeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], LoginService);
-    return LoginService;
+    ], EmployeeService);
+    return EmployeeService;
 }());
-exports.LoginService = LoginService;
-//# sourceMappingURL=login.service.js.map
+exports.EmployeeService = EmployeeService;
+//# sourceMappingURL=employee.service.js.map

@@ -18,7 +18,6 @@ var HRComponent = (function () {
         this.selectedEmployeeId = 0;
         _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId) {
             this.selectedEmployeeId = employeeId;
-            this._router.navigate(['home/hr/overview', this.selectedEmployeeId]);
         }).bind(this));
     }
     HRComponent = __decorate([

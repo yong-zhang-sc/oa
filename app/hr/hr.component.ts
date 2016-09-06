@@ -17,7 +17,6 @@ export class HRComponent {
 
         _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId: number) {
             this.selectedEmployeeId = employeeId;
-            this._router.navigate(['home/hr/overview', this.selectedEmployeeId]);
 
         }).bind(this));
 

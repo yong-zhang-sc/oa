@@ -16,11 +16,16 @@ var EmployeeOverviewComponent = (function () {
         this.route = route;
         this.router = router;
         this._employeeService = _employeeService;
-        this.employee = null;
+        this.employee = {};
+        this.employeeId = 0;
     }
     EmployeeOverviewComponent.prototype.ngOnInit = function () {
+        var _this = this;
         this.route.params.subscribe(function (params) {
-            var id = +params['id']; // (+) converts string 'id' to a number
+            _this.employeeId = +params['Id'];
+            _this._employeeService.getEmployeeById(_this.employeeId).subscribe(function (data) {
+                Object.assign(_this.employee, data);
+            });
         });
     };
     EmployeeOverviewComponent = __decorate([

@@ -1,0 +1,21 @@
+<!-- /.col -->
+<div class="col-md-10">
+    <div class="box box-success">
+        <div class="box-body">
+            <table class="form-table">
+                <caption>紧急联系人 <br /> Emergency Linkman</caption>
+                <tr>
+                    <th>联系人</th>
+                    <th>关系</th>
+                    <th>电话</th>
+                </tr>
+                <tr *ngFor="let contact of employee.EmergencyLinkmen">
+                    <td>{{contact.Name}}</td>
+                    <td>{{contact.Relationship}}</td>
+                    <td>{{contact.Tel}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<!-- /.col -->

@@ -9,10 +9,10 @@
                     <th>培训机构</th>
                     <th>所获职称/证书</th>
                 </tr>
-                <tr>
-                    <td>2013-3-5 — 3015-12-31</td>
-                    <td>北大青鸟计算机培训</td>
-                    <td>程序员证书</td>
+                <tr *ngFor="let traning of employee.Trainings">
+                    <td>{{traning.StartTime | date:'y-MM-dd'}} — {{traning.EndTime | date:'y-MM-dd'}}</td>
+                    <td>{{training.Institution}}</td>
+                    <td>{{training.Result}}</td>
                 </tr>
             </table>
         </div>

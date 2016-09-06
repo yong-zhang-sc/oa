@@ -27,6 +27,11 @@ var EmployeeService = (function () {
     };
     EmployeeService.prototype.getEmployeeById = function (Id) {
         // todo
+        var url = app_config_1.Config.url + ("api/staff/fullinfo/" + Id);
+        console.log(url);
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        var options = new http_1.RequestOptions({ headers: headers });
+        return this.http.get(url, options).map(function (res) { return res.json().data; });
     };
     EmployeeService = __decorate([
         core_1.Injectable(), 

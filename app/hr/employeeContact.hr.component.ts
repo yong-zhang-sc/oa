@@ -1,29 +1,29 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
 import { EmployeeService } from './employee.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
     //selector: 'employee-profile',
-    templateUrl: './app/hr/employeeOverview.hr.component.html'
+    templateUrl: './app/hr/employeeContact.hr.component.html'
 })
-export class EmployeeOverviewComponent implements OnInit {
+export class EmployeeContactComponent implements OnInit {
 
     employee: any = {};
     employeeId: number = 0;
 
-    constructor(private route: ActivatedRoute, private router: Router, private _employeeService: EmployeeService) {
-
+    constructor(private route: ActivatedRoute, private _employeeService: EmployeeService) {
     }
 
     ngOnInit() {
-
         this.route.params.subscribe(params => {
             this.employeeId = +params['Id'];
 
             this._employeeService.getEmployeeById(this.employeeId).subscribe(data => {
 
                 Object.assign(this.employee, data);
-               
+
+                console.log(this.employee.EmergencyLinkmen);
+
             });
         });
     }

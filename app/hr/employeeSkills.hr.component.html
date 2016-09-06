@@ -10,16 +10,14 @@
                     <th>水平</th>
                     <th>是否有证书</th>
                 </tr>
-                <tr>
-                    <td>英语</td>
-                    <td>一般</td>
-                    <td><span class="label label-danger">否</span></td>
-                </tr>
-                <tr>
-                    <td>日语</td>
-                    <td>良好</td>
-                    <td><span class="label label-success">是</span></td>
-                </tr>
+                <tr *ngFor="let language of employee.Languages">
+                    <td>{{language.Name}}</td>
+                    <td>{{language.Level}}</td>
+                    <td>
+                        <span *ngIf="language.HasCertificate" class="label label-danger">是</span>
+                        <span *ngIf="!language.HasCertificate" class="label label-danger">否</span>
+                    </td>
+                </tr>        
             </table>
         </div>
     </div>

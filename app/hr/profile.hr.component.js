@@ -15,9 +15,9 @@ var EmployeeProfileComponent = (function () {
     function EmployeeProfileComponent(employeeService, _communicationService) {
         this.employeeService = employeeService;
         this._communicationService = _communicationService;
-        this.selectedEmployee = null;
-        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employee) {
-            this.selectedEmployee = employee;
+        this.selectedEmployeeId = 0;
+        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId) {
+            this.selectedEmployeeId = employeeId;
             // this._router.navigate(['../overview']);
         }).bind(this));
     }

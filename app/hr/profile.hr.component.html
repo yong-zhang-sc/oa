@@ -1,6 +1,6 @@
 <div class="col-md-2">
     <!-- Profile Image -->
-    <div class="box box-primary" *ngIf="!selectedEmployee">
+    <div class="box box-primary" *ngIf="!selectedEmployeeId">
         <div class="box-body">
             <img class="profile-user-img img-responsive" src="/content/Images/avatar_default.jpg" alt="User profile picture">
 
@@ -13,7 +13,7 @@
     <!-- /.box -->
 
     <!-- Profile Image -->
-    <div class="box box-primary" *ngIf="selectedEmployee">
+    <div class="box box-primary" *ngIf="selectedEmployeeId">
         <div class="box-body">
             <img class="profile-user-img img-responsive" src="../Images/樱木花道.jpg" alt="周子濠">
 
@@ -45,15 +45,15 @@
         <!-- /.box-body -->
     </div>
     <!-- /.box -->
-    <div class="box box-warning" *ngIf="selectedEmployee">
+    <div class="box box-warning" *ngIf="selectedEmployeeId">
         <div class="box-body">
             <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a routerLink="overview">基本信息</a></li>
-                <li><a routerLink="education">学历信息</a></li>
-                <li><a routerLink="workExperience">工作经历</a></li>
-                <li><a routerLink="training">培训经历</a></li>
-                <li><a routerLink="contract">紧急联系人</a></li>
-                <li><a routerLink="skills">语种</a></li>
+                <li class="active"><a routerLink="overview/{{selectedEmployeeId}}">基本信息</a></li>
+                <li><a routerLink="education/{{selectedEmployeeId}}">学历信息</a></li>
+                <li><a routerLink="workExperience/{{selectedEmployeeId}}">工作经历</a></li>
+                <li><a routerLink="training/{{selectedEmployeeId}}">培训经历</a></li>
+                <li><a routerLink="contract/{{selectedEmployeeId}}">紧急联系人</a></li>
+                <li><a routerLink="skills/{{selectedEmployeeId}}">语种</a></li>
             </ul>
         </div>
     </div>

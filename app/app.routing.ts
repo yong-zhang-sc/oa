@@ -11,7 +11,7 @@ import { EmployeeOverviewComponent} from './hr/employeeOverview.hr.component';
 import { EmployeeEducationComponent} from './hr/employeeEducation.hr.component';
 import { EmployeeWorkExperienceComponent} from './hr/employeeWorkExperience.hr.component';
 import { EmployeeTrainingComponent} from './hr/employeeTraining.hr.component';
-import { EmployeeContractComponent } from './hr/employeeContract.hr.component';
+import { EmployeeContactComponent } from './hr/employeeContact.hr.component';
 import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
 
 // import { HomeModule } from './home.module';
@@ -36,12 +36,12 @@ const appRoutes: Routes = [
       { path: 'hr', component: HRComponent, children :[
         { path: '', redirectTo: 'employees',  pathMatch : 'full'},
             { path: 'employees', component: EmployeeListComponent },
-            { path: 'overview/:id', component: EmployeeOverviewComponent },
-            { path: 'education/:id', component: EmployeeEducationComponent },
-            { path: 'workExperience/:id', component: EmployeeWorkExperienceComponent },
-            { path: 'training/:id', component: EmployeeTrainingComponent },
-            { path: 'contract/:id', component: EmployeeContractComponent },
-            { path: 'skills/:id', component: EmployeeSkillsComponent }
+            { path: 'overview/:Id', component: EmployeeOverviewComponent },
+            { path: 'education/:Id', component: EmployeeEducationComponent },
+            { path: 'workExperience/:Id', component: EmployeeWorkExperienceComponent },
+            { path: 'training/:Id', component: EmployeeTrainingComponent },
+            { path: 'contract/:Id', component: EmployeeContactComponent },
+            { path: 'skills/:Id', component: EmployeeSkillsComponent }
       ] }
     ]
   }

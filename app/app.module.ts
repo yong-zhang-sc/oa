@@ -19,7 +19,7 @@ import { EmployeeOverviewComponent} from './hr/employeeOverview.hr.component';
 import { EmployeeEducationComponent} from './hr/employeeEducation.hr.component';
 import { EmployeeWorkExperienceComponent} from './hr/employeeWorkExperience.hr.component';
 import { EmployeeTrainingComponent} from './hr/employeeTraining.hr.component';
-import { EmployeeContractComponent } from './hr/employeeContract.hr.component';
+import { EmployeeContactComponent } from './hr/employeeContact.hr.component';
 import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
 import { FilterByKeywordsPipe } from './hr/filterByKeyword.pipe';
 
@@ -48,7 +48,7 @@ import {EmployeeService } from './hr/employee.service';
     EmployeeEducationComponent,
     EmployeeWorkExperienceComponent,
     EmployeeTrainingComponent,
-    EmployeeContractComponent,
+    EmployeeContactComponent,
     EmployeeSkillsComponent,
     FilterByKeywordsPipe
   ],

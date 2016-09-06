@@ -11,13 +11,13 @@ import { Router } from '@angular/router';
 })
 export class HRComponent {
 
-    selectedEmployee: any = null;
+    selectedEmployeeId = 0;
 
     constructor(private _communicationService: CommunicationService, private _router: Router) {
 
-        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employee: any) {
-            this.selectedEmployee = employee;
-            this._router.navigate(['home/hr/overview', this.selectedEmployee.Id]);
+        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId: number) {
+            this.selectedEmployeeId = employeeId;
+            this._router.navigate(['home/hr/overview', this.selectedEmployeeId]);
 
         }).bind(this));
 

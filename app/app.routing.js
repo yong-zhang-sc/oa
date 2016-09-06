@@ -9,7 +9,7 @@ var employeeOverview_hr_component_1 = require('./hr/employeeOverview.hr.componen
 var employeeEducation_hr_component_1 = require('./hr/employeeEducation.hr.component');
 var employeeWorkExperience_hr_component_1 = require('./hr/employeeWorkExperience.hr.component');
 var employeeTraining_hr_component_1 = require('./hr/employeeTraining.hr.component');
-var employeeContract_hr_component_1 = require('./hr/employeeContract.hr.component');
+var employeeContact_hr_component_1 = require('./hr/employeeContact.hr.component');
 var employeeSkills_hr_component_1 = require('./hr/employeeSkills.hr.component');
 // import { HomeModule } from './home.module';
 var appRoutes = [
@@ -31,12 +31,12 @@ var appRoutes = [
             { path: 'hr', component: hr_component_1.HRComponent, children: [
                     { path: '', redirectTo: 'employees', pathMatch: 'full' },
                     { path: 'employees', component: employees_hr_component_1.EmployeeListComponent },
-                    { path: 'overview/:id', component: employeeOverview_hr_component_1.EmployeeOverviewComponent },
-                    { path: 'education/:id', component: employeeEducation_hr_component_1.EmployeeEducationComponent },
-                    { path: 'workExperience/:id', component: employeeWorkExperience_hr_component_1.EmployeeWorkExperienceComponent },
-                    { path: 'training/:id', component: employeeTraining_hr_component_1.EmployeeTrainingComponent },
-                    { path: 'contract/:id', component: employeeContract_hr_component_1.EmployeeContractComponent },
-                    { path: 'skills/:id', component: employeeSkills_hr_component_1.EmployeeSkillsComponent }
+                    { path: 'overview/:Id', component: employeeOverview_hr_component_1.EmployeeOverviewComponent },
+                    { path: 'education/:Id', component: employeeEducation_hr_component_1.EmployeeEducationComponent },
+                    { path: 'workExperience/:Id', component: employeeWorkExperience_hr_component_1.EmployeeWorkExperienceComponent },
+                    { path: 'training/:Id', component: employeeTraining_hr_component_1.EmployeeTrainingComponent },
+                    { path: 'contract/:Id', component: employeeContact_hr_component_1.EmployeeContactComponent },
+                    { path: 'skills/:Id', component: employeeSkills_hr_component_1.EmployeeSkillsComponent }
                 ] }
         ]
     }

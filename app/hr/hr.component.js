@@ -15,10 +15,10 @@ var HRComponent = (function () {
     function HRComponent(_communicationService, _router) {
         this._communicationService = _communicationService;
         this._router = _router;
-        this.selectedEmployee = null;
-        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employee) {
-            this.selectedEmployee = employee;
-            this._router.navigate(['home/hr/overview', this.selectedEmployee.Id]);
+        this.selectedEmployeeId = 0;
+        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId) {
+            this.selectedEmployeeId = employeeId;
+            this._router.navigate(['home/hr/overview', this.selectedEmployeeId]);
         }).bind(this));
     }
     HRComponent = __decorate([

@@ -20,8 +20,8 @@ var CommunicationService = (function () {
     }
     //   missionConfirmed$ = this.missionConfirmedSource.asObservable();
     // Service message commands
-    CommunicationService.prototype.announceEmployeeChanged = function (employee) {
-        this.selectedEmployeeSource.next(employee);
+    CommunicationService.prototype.announceEmployeeChanged = function (employeeId) {
+        this.selectedEmployeeSource.next(employeeId);
     };
     CommunicationService = __decorate([
         core_1.Injectable(), 

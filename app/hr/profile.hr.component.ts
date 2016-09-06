@@ -8,14 +8,16 @@ import { CommunicationService } from '../communication.service';
 })
 export class EmployeeProfileComponent {
 
-    selectedEmployee : any = null;
+    selectedEmployeeId = 0;
 
-    constructor(private employeeService: EmployeeService, private _communicationService : CommunicationService) {
-        _communicationService.selectedEmployeeAnnounced$.subscribe((function(employee : any){
-            this.selectedEmployee = employee;
+    constructor(private employeeService: EmployeeService, private _communicationService: CommunicationService) {
+        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId: number) {
+            this.selectedEmployeeId = employeeId;
 
             // this._router.navigate(['../overview']);
 
         }).bind(this));
     }
+
+ 
 }

@@ -1,8 +1,8 @@
 import { Component, EventEmitter, Input, Output  } from '@angular/core';
-
 import {EmployeeService} from './employee.service';
 import { Observable } from 'rxjs';
 import { CommunicationService } from '../communication.service';
+import { Router } from '@angular/router';
 
 @Component({
     //selector: 'employee-profile',
@@ -16,7 +16,7 @@ export class EmployeeListComponent {
     public _employeeList: Array<any>;
     keyword: string = '';
 
-    constructor(private _employeeService: EmployeeService, private _communicationService: CommunicationService) {
+    constructor(private _employeeService: EmployeeService, private _communicationService: CommunicationService, private _router: Router) {
 
     }
 
@@ -27,7 +27,6 @@ export class EmployeeListComponent {
 
             this._employeeList = res;
 
-
         }).bind(this));
     }
 
@@ -36,6 +35,8 @@ export class EmployeeListComponent {
 
         console.log('announcing ' + JSON.stringify(employee));
 
-        this._communicationService.announceEmployeeChanged(employee);
+        this._communicationService.announceEmployeeChanged(employee.AccountId);
+        this._router.navigate(['home/hr/overview', employee.AccountId]);
+
     }
 }

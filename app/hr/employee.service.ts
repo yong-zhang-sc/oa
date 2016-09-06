@@ -20,15 +20,24 @@ export class EmployeeService {
         let headers = new Headers({ 'Content-Type': 'application/json' });
         let options = new RequestOptions({ headers: headers });
 
-        return this.http.get(url, options).map(function(res, idx){
-          return res.json();  
+        return this.http.get(url, options).map(function (res, idx) {
+            return res.json();
         });
 
     }
 
-    getEmployeeById(Id : Number){
+    getEmployeeById(Id: Number): Observable<any> {
 
         // todo
+        var url = Config.url + `api/staff/fullinfo/${Id}`;
+
+        console.log(url);
+
+        let headers = new Headers({ 'Content-Type': 'application/json' });
+        let options = new RequestOptions({ headers: headers });
+
+        return this.http.get(url, options).map(res => res.json().data);
+
 
     }
 }

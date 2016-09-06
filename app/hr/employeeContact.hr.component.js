@@ -11,31 +11,31 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var employee_service_1 = require('./employee.service');
 var router_1 = require('@angular/router');
-var EmployeeEducationComponent = (function () {
-    function EmployeeEducationComponent(route, _employeeService) {
+var EmployeeContactComponent = (function () {
+    function EmployeeContactComponent(route, _employeeService) {
         this.route = route;
         this._employeeService = _employeeService;
         this.employee = {};
         this.employeeId = 0;
     }
-    EmployeeEducationComponent.prototype.ngOnInit = function () {
+    EmployeeContactComponent.prototype.ngOnInit = function () {
         var _this = this;
         this.route.params.subscribe(function (params) {
             _this.employeeId = +params['Id'];
             _this._employeeService.getEmployeeById(_this.employeeId).subscribe(function (data) {
                 Object.assign(_this.employee, data);
-                console.log(_this.employee.Educations);
+                console.log(_this.employee.EmergencyLinkmen);
             });
         });
     };
-    EmployeeEducationComponent = __decorate([
+    EmployeeContactComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',
-            templateUrl: './app/hr/employeeEducation.hr.component.html'
+            templateUrl: './app/hr/employeeContact.hr.component.html'
         }), 
         __metadata('design:paramtypes', [router_1.ActivatedRoute, employee_service_1.EmployeeService])
-    ], EmployeeEducationComponent);
-    return EmployeeEducationComponent;
+    ], EmployeeContactComponent);
+    return EmployeeContactComponent;
 }());
-exports.EmployeeEducationComponent = EmployeeEducationComponent;
-//# sourceMappingURL=employeeEducation.hr.component.js.map
+exports.EmployeeContactComponent = EmployeeContactComponent;
+//# sourceMappingURL=employeeContact.hr.component.js.map

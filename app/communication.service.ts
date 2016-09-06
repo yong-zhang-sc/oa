@@ -11,8 +11,8 @@ export class CommunicationService {
   selectedEmployeeAnnounced$ = this.selectedEmployeeSource.asObservable();
   //   missionConfirmed$ = this.missionConfirmedSource.asObservable();
   // Service message commands
-  announceEmployeeChanged(employee: any) {
-    this.selectedEmployeeSource.next(employee);
+  announceEmployeeChanged(employeeId : number) {
+    this.selectedEmployeeSource.next(employeeId);
   }
   //   confirmMission(astronaut: string) {
   //     this.missionConfirmedSource.next(astronaut);

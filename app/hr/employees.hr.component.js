@@ -11,10 +11,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var employee_service_1 = require('./employee.service');
 var communication_service_1 = require('../communication.service');
+var router_1 = require('@angular/router');
 var EmployeeListComponent = (function () {
-    function EmployeeListComponent(_employeeService, _communicationService) {
+    function EmployeeListComponent(_employeeService, _communicationService, _router) {
         this._employeeService = _employeeService;
         this._communicationService = _communicationService;
+        this._router = _router;
         this.keyword = '';
     }
     EmployeeListComponent.prototype.ngOnInit = function () {
@@ -25,14 +27,15 @@ var EmployeeListComponent = (function () {
     };
     EmployeeListComponent.prototype.selectEmployee = function (employee) {
         console.log('announcing ' + JSON.stringify(employee));
-        this._communicationService.announceEmployeeChanged(employee);
+        this._communicationService.announceEmployeeChanged(employee.AccountId);
+        this._router.navigate(['home/hr/overview', employee.AccountId]);
     };
     EmployeeListComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',
             templateUrl: './app/hr/employees.hr.component.html'
         }), 
-        __metadata('design:paramtypes', [employee_service_1.EmployeeService, communication_service_1.CommunicationService])
+        __metadata('design:paramtypes', [employee_service_1.EmployeeService, communication_service_1.CommunicationService, router_1.Router])
     ], EmployeeListComponent);
     return EmployeeListComponent;
 }());

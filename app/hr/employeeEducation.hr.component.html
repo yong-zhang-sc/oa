@@ -10,17 +10,11 @@
                     <th>所学专业</th>
                     <th>学历/学位</th>
                 </tr>
-                <tr>
-                    <td>2013-3-5 — 3015-12-31</td>
-                    <td>吉林大学</td>
-                    <td>计算机信息应用</td>
-                    <td>本科</td>
-                </tr>
-                <tr>
-                    <td>2013-3-5 — 3015-12-31</td>
-                    <td>xxxxx学院</td>
-                    <td>电工</td>
-                    <td>专科</td>
+                <tr *ngFor="let edu of employee.Educations">
+                    <td>{{edu.StartTime | date:'y-MM-dd'}} — {{edu.EndTime | date:'y-MM-dd'}} </td>
+                    <td>{{edu.SchoolName}}</td>
+                    <td>{{edu.Specialty}}</td>
+                    <td>{{edu.Education}}</td>
                 </tr>
             </table>
         </div>

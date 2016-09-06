@@ -12,15 +12,26 @@ var core_1 = require('@angular/core');
 var employee_service_1 = require('./employee.service');
 var communication_service_1 = require('../communication.service');
 var EmployeeProfileComponent = (function () {
-    function EmployeeProfileComponent(employeeService, _communicationService) {
-        this.employeeService = employeeService;
+    function EmployeeProfileComponent(_employeeService, _communicationService) {
+        this._employeeService = _employeeService;
         this._communicationService = _communicationService;
         this.selectedEmployeeId = 0;
-        _communicationService.selectedEmployeeAnnounced$.subscribe((function (employeeId) {
-            this.selectedEmployeeId = employeeId;
-            // this._router.navigate(['../overview']);
-        }).bind(this));
+        this.employee = {};
+        this.emailPrefix = '';
     }
+    EmployeeProfileComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._communicationService.selectedEmployeeAnnounced$.subscribe(function (employeeId) {
+            _this.selectedEmployeeId = employeeId;
+            if (employeeId > 0) {
+                _this._employeeService.getEmployeeById(employeeId).subscribe(function (data) {
+                    // this.employee = JSON.parse(JSON.stringify(data));
+                    Object.assign(_this.employee, data);
+                    _this.emailPrefix = data.Email.substring(0, data.Email.indexOf('@'));
+                });
+            }
+        });
+    };
     EmployeeProfileComponent = __decorate([
         core_1.Component({
             selector: 'employee-profile',

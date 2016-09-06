@@ -20,6 +20,7 @@ var EmployeeListComponent = (function () {
         this.keyword = '';
     }
     EmployeeListComponent.prototype.ngOnInit = function () {
+        this._communicationService.announceEmployeeChanged(0);
         this._employeeService.getEmployeeList().subscribe((function (res) {
             console.log(res);
             this._employeeList = res;

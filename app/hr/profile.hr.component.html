@@ -15,31 +15,34 @@
     <!-- Profile Image -->
     <div class="box box-primary" *ngIf="selectedEmployeeId">
         <div class="box-body">
-            <img class="profile-user-img img-responsive" src="../Images/樱木花道.jpg" alt="周子濠">
+            <img class="profile-user-img img-responsive" src="/content/Images/cab1121e8b3320e82430d87e8c56a1c7.jpg" alt="{{employee.LoginName}}"
+                style="width:100%;">
 
-            <h3 class="profile-username text-center"><strong>周子濠</strong></h3>
+            <h3 class="profile-username text-center"><strong>{{employee.LoginName}}</strong></h3>
 
             <ul class="list-group list-group-unbordered">
                 <li class="list-group-item">
-                    <b>邮箱</b> <a class="pull-right">zihao.zhou@goodhopevisa.com</a>
-
-
+                    <b>邮箱</b> <a class="pull-right" data-toggle="tooltip" title="{{employee.Email}}" href="mailto:{{employee.Email}}">{{emailPrefix}}</a>
                 </li>
                 <li class="list-group-item">
-                    <b>手机号</b> <a class="pull-right">15011052050</a>
+                    <b>手机号</b> <a class="pull-right">{{employee.Mobile}}</a>
                 </li>
                 <li class="list-group-item">
-                    <b>职务</b> <a class="pull-right">软件工程师</a>
+                    <b>职务</b> <a class="pull-right">{{employee.JobTitle}}</a>
                 </li>
                 <li class="list-group-item">
-                    <b>部门</b> <a class="pull-right">IT部</a>
+                    <b>部门</b> <a class="pull-right">{{employee.Organization}}</a>
                 </li>
                 <li class="list-group-item">
-                    <b>直属领导</b> <a class="pull-right">傅冰</a>
+                    <b>直属领导</b> <a class="pull-right">{{employee.Leader}}</a>
                 </li>
             </ul>
 
-            <a href="#" class="btn btn-primary btn-block"><i class="fa fa-pencil"></i> <b>编辑</b></a>
+            <div class="text-center">
+                <a href="#" class="btn btn-warning" data-toggle="tooltip" title="更新账号"><i class="fa fa-pencil-square-o"></i> <b>账号</b></a>
+                <a routerLink="" class="btn btn-success" data-toggle="tooltip" title="更新档案"><i class="fa fa-pencil-square-o"></i> <b>档案</b></a>
+                <a href="#" class="btn btn-primary" data-toggle="tooltip" title="更新头像"><i class="fa fa-pencil-square-o"></i> <b>头像</b></a>
+            </div>
 
         </div>
         <!-- /.box-body -->

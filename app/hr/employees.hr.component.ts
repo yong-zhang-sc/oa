@@ -21,6 +21,8 @@ export class EmployeeListComponent {
     }
 
     ngOnInit() {
+        this._communicationService.announceEmployeeChanged(0);
+
         this._employeeService.getEmployeeList().subscribe((function (res: any) {
 
             console.log(res);

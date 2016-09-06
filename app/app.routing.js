@@ -11,6 +11,7 @@ var employeeWorkExperience_hr_component_1 = require('./hr/employeeWorkExperience
 var employeeTraining_hr_component_1 = require('./hr/employeeTraining.hr.component');
 var employeeContact_hr_component_1 = require('./hr/employeeContact.hr.component');
 var employeeSkills_hr_component_1 = require('./hr/employeeSkills.hr.component');
+var employeeOverview_edit_hr_component_1 = require('./hr/employeeOverview.edit.hr.component');
 // import { HomeModule } from './home.module';
 var appRoutes = [
     {
@@ -28,7 +29,8 @@ var appRoutes = [
         children: [
             { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
             { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
-            { path: 'hr', component: hr_component_1.HRComponent, children: [
+            {
+                path: 'hr', component: hr_component_1.HRComponent, children: [
                     { path: '', redirectTo: 'employees', pathMatch: 'full' },
                     { path: 'employees', component: employees_hr_component_1.EmployeeListComponent },
                     { path: 'overview/:Id', component: employeeOverview_hr_component_1.EmployeeOverviewComponent },
@@ -36,8 +38,10 @@ var appRoutes = [
                     { path: 'workExperience/:Id', component: employeeWorkExperience_hr_component_1.EmployeeWorkExperienceComponent },
                     { path: 'training/:Id', component: employeeTraining_hr_component_1.EmployeeTrainingComponent },
                     { path: 'contract/:Id', component: employeeContact_hr_component_1.EmployeeContactComponent },
-                    { path: 'skills/:Id', component: employeeSkills_hr_component_1.EmployeeSkillsComponent }
-                ] }
+                    { path: 'skills/:Id', component: employeeSkills_hr_component_1.EmployeeSkillsComponent },
+                    { path: 'overviewEdit/:Id', component: employeeOverview_edit_hr_component_1.EmployeeOverviewEditComponent }
+                ]
+            }
         ]
     }
 ];

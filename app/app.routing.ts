@@ -13,6 +13,7 @@ import { EmployeeWorkExperienceComponent} from './hr/employeeWorkExperience.hr.c
 import { EmployeeTrainingComponent} from './hr/employeeTraining.hr.component';
 import { EmployeeContactComponent } from './hr/employeeContact.hr.component';
 import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
+import { EmployeeOverviewEditComponent } from './hr/employeeOverview.edit.hr.component';
 
 // import { HomeModule } from './home.module';
 
@@ -33,16 +34,19 @@ const appRoutes: Routes = [
     children: [
       { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'hr', component: HRComponent, children :[
-        { path: '', redirectTo: 'employees',  pathMatch : 'full'},
-            { path: 'employees', component: EmployeeListComponent },
-            { path: 'overview/:Id', component: EmployeeOverviewComponent },
-            { path: 'education/:Id', component: EmployeeEducationComponent },
-            { path: 'workExperience/:Id', component: EmployeeWorkExperienceComponent },
-            { path: 'training/:Id', component: EmployeeTrainingComponent },
-            { path: 'contract/:Id', component: EmployeeContactComponent },
-            { path: 'skills/:Id', component: EmployeeSkillsComponent }
-      ] }
+      {
+        path: 'hr', component: HRComponent, children: [
+          { path: '', redirectTo: 'employees', pathMatch: 'full' },
+          { path: 'employees', component: EmployeeListComponent },
+          { path: 'overview/:Id', component: EmployeeOverviewComponent },
+          { path: 'education/:Id', component: EmployeeEducationComponent },
+          { path: 'workExperience/:Id', component: EmployeeWorkExperienceComponent },
+          { path: 'training/:Id', component: EmployeeTrainingComponent },
+          { path: 'contract/:Id', component: EmployeeContactComponent },
+          { path: 'skills/:Id', component: EmployeeSkillsComponent },
+          { path: 'overviewEdit/:Id', component: EmployeeOverviewEditComponent }
+        ]
+      }
     ]
   }
 ];

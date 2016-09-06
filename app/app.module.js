@@ -27,6 +27,7 @@ var employeeWorkExperience_hr_component_1 = require('./hr/employeeWorkExperience
 var employeeTraining_hr_component_1 = require('./hr/employeeTraining.hr.component');
 var employeeContact_hr_component_1 = require('./hr/employeeContact.hr.component');
 var employeeSkills_hr_component_1 = require('./hr/employeeSkills.hr.component');
+var employeeOverview_edit_hr_component_1 = require('./hr/employeeOverview.edit.hr.component');
 var filterByKeyword_pipe_1 = require('./hr/filterByKeyword.pipe');
 // import {HRModule} from './hr/hr.module';
 var app_routing_1 = require('./app.routing');
@@ -55,6 +56,7 @@ var AppModule = (function () {
                 employeeTraining_hr_component_1.EmployeeTrainingComponent,
                 employeeContact_hr_component_1.EmployeeContactComponent,
                 employeeSkills_hr_component_1.EmployeeSkillsComponent,
+                employeeOverview_edit_hr_component_1.EmployeeOverviewEditComponent,
                 filterByKeyword_pipe_1.FilterByKeywordsPipe
             ],
             bootstrap: [app_component_1.AppComponent],

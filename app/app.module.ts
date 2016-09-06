@@ -21,6 +21,8 @@ import { EmployeeWorkExperienceComponent} from './hr/employeeWorkExperience.hr.c
 import { EmployeeTrainingComponent} from './hr/employeeTraining.hr.component';
 import { EmployeeContactComponent } from './hr/employeeContact.hr.component';
 import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
+import { EmployeeOverviewEditComponent } from './hr/employeeOverview.edit.hr.component';
+
 import { FilterByKeywordsPipe } from './hr/filterByKeyword.pipe';
 
 
@@ -50,6 +52,7 @@ import {EmployeeService } from './hr/employee.service';
     EmployeeTrainingComponent,
     EmployeeContactComponent,
     EmployeeSkillsComponent,
+    EmployeeOverviewEditComponent,
     FilterByKeywordsPipe
   ],
   bootstrap: [AppComponent],

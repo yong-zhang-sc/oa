@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var app_component_1 = require('./app.component');
+var message_component_1 = require('./message.component');
 var login_component_1 = require('./login.component');
 var home_component_1 = require('./home/home.component');
 var header_component_1 = require('./home/header.component');
@@ -34,13 +35,16 @@ var app_routing_1 = require('./app.routing');
 var communication_service_1 = require('./communication.service');
 var login_service_1 = require('./login.service');
 var employee_service_1 = require('./hr/employee.service');
+var message_service_1 = require('./message.service');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
             imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule],
-            declarations: [app_component_1.AppComponent,
+            declarations: [
+                app_component_1.AppComponent,
+                message_component_1.MessageComponent,
                 login_component_1.LoginComponent,
                 home_component_1.HomeComponent,
                 header_component_1.HeaderComponent,
@@ -59,8 +63,8 @@ var AppModule = (function () {
                 employeeOverview_edit_hr_component_1.EmployeeOverviewEditComponent,
                 filterByKeyword_pipe_1.FilterByKeywordsPipe
             ],
-            bootstrap: [app_component_1.AppComponent],
-            providers: [login_service_1.LoginService, employee_service_1.EmployeeService, communication_service_1.CommunicationService]
+            bootstrap: [app_component_1.AppComponent, message_component_1.MessageComponent],
+            providers: [login_service_1.LoginService, employee_service_1.EmployeeService, communication_service_1.CommunicationService, message_service_1.MessageService]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

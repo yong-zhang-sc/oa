@@ -9,17 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var AppComponent = (function () {
-    function AppComponent() {
+var Subject_1 = require('rxjs/Subject');
+var MessageService = (function () {
+    function MessageService() {
+        // Observable string sources
+        this.messageSource = new Subject_1.Subject();
+        // Observable string streams
+        this.messageAnnounced = this.messageSource.asObservable();
     }
-    AppComponent = __decorate([
-        core_1.Component({
-            selector: 'my-app',
-            template: "\n    <div>\n        <message></message>\n        <router-outlet></router-outlet>\n\n    </div>\n    "
-        }), 
+    // Service message commands
+    MessageService.prototype.announceEmployeeChanged = function (message) {
+        this.messageSource.next(message);
+    };
+    MessageService = __decorate([
+        core_1.Injectable(), 
         __metadata('design:paramtypes', [])
-    ], AppComponent);
-    return AppComponent;
+    ], MessageService);
+    return MessageService;
 }());
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+exports.MessageService = MessageService;
+//# sourceMappingURL=message.service.js.map

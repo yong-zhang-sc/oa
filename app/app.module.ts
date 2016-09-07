@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }    from '@angular/http';
 
 import { AppComponent }  from './app.component';
+import { MessageComponent } from './message.component';
 import { LoginComponent } from './login.component';
 import { HomeComponent } from './home/home.component';
 import { HeaderComponent} from './home/header.component';
@@ -33,10 +34,13 @@ import { routing } from './app.routing';
 import { CommunicationService } from './communication.service';
 import {LoginService} from './login.service';
 import {EmployeeService } from './hr/employee.service';
+import { MessageService, Message } from './message.service';
 
 @NgModule({
   imports: [BrowserModule, routing, HttpModule],
-  declarations: [AppComponent,
+  declarations: [
+    AppComponent,
+    MessageComponent,
     LoginComponent,
     HomeComponent,
     HeaderComponent,
@@ -54,8 +58,9 @@ import {EmployeeService } from './hr/employee.service';
     EmployeeSkillsComponent,
     EmployeeOverviewEditComponent,
     FilterByKeywordsPipe
+    
   ],
-  bootstrap: [AppComponent],
-  providers: [LoginService,EmployeeService,CommunicationService]
+  bootstrap: [AppComponent, MessageComponent],
+  providers: [LoginService,EmployeeService,CommunicationService,MessageService]
 })
 export class AppModule { }

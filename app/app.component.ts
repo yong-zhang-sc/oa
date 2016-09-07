@@ -1,7 +1,19 @@
-import { Component } from '@angular/core';
+import {Input, Component } from '@angular/core';
+import {MessageComponent} from './message.component';
 
 @Component({
     selector: 'my-app',
-    templateUrl: './app/app.component.html'
+    template: `
+    <div>
+        <message></message>
+        <router-outlet></router-outlet>
+
+    </div>
+    `
+    
 })
-export class AppComponent { }
+export class AppComponent {
+
+}
+
+

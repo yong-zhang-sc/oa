@@ -11,19 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var login_service_1 = require('./login.service');
+var message_service_1 = require('./message.service');
 var LoginComponent = (function () {
-    function LoginComponent(router, service) {
+    function LoginComponent(router, service, _messageService) {
         this.service = service;
+        this._messageService = _messageService;
         this.router = router;
     }
     LoginComponent.prototype.login = function (account, password) {
+        if (!account || !password) {
+            this._messageService.announceEmployeeChanged({ type: 'warning', message: '您输入的用户名密码均不能为空.' });
+            return;
+        }
         var result = this.service.login(account, password).subscribe((function (res) {
             console.log(res);
             if (res.valid) {
+                this._messageService.announceEmployeeChanged({ type: '', message: '' });
                 this.router.navigate(['/home']);
             }
             else {
-                alert(res.message);
+                this._messageService.announceEmployeeChanged({ type: 'warning', message: '登录失败，请检查用户名密码.' });
             }
         }).bind(this));
     };
@@ -32,7 +39,7 @@ var LoginComponent = (function () {
             selector: 'login',
             templateUrl: './app/login.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.Router, login_service_1.LoginService])
+        __metadata('design:paramtypes', [router_1.Router, login_service_1.LoginService, message_service_1.MessageService])
     ], LoginComponent);
     return LoginComponent;
 }());

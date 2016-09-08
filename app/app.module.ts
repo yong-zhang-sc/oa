@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }    from '@angular/http';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent }  from './app.component';
 import { MessageComponent } from './message.component';
@@ -37,7 +38,7 @@ import {EmployeeService } from './hr/employee.service';
 import { MessageService, Message } from './message.service';
 
 @NgModule({
-  imports: [BrowserModule, routing, HttpModule],
+  imports: [BrowserModule, routing, HttpModule,FormsModule],
   declarations: [
     AppComponent,
     MessageComponent,

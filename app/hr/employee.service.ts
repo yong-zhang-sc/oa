@@ -40,4 +40,13 @@ export class EmployeeService {
 
 
     }
+
+    updateEmployee(employee : any){
+
+        var url = Config.url + `api/staff/info`;
+
+        return this.http.post(url, employee).map(res => res.json());
+
+    }
+
 }

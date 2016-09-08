@@ -33,6 +33,10 @@ var EmployeeService = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         return this.http.get(url, options).map(function (res) { return res.json().data; });
     };
+    EmployeeService.prototype.updateEmployee = function (employee) {
+        var url = app_config_1.Config.url + "api/staff/info";
+        return this.http.post(url, employee).map(function (res) { return res.json(); });
+    };
     EmployeeService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])

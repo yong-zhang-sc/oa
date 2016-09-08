@@ -1,64 +1,77 @@
 <!-- /.col -->
 <div class="col-md-10">
-    <div class="box box-success">
-        <div class="box-body">
-            <table class="form-table edit">
-                <caption>
-                    基本信息 <br /> Personal Information
-                </caption>
-                <tr>
-                    <td class="title">
-                        中文名 <span class="text-danger">*</span><br /> Chinese Name
-                    </td>
-                    <td>
-                        <input type="text" class="form-control" id="chineseName" />
-                    </td>
-                    <td class="title">
-                        英文名<br /> English Name
-                    </td>
-                    <td><input type="text" class="form-control" /></td>
-                    <td class="title">
-                        性别<br /> Gender
-                    </td>
-                    <td>
-                        <select class="form-control" name="Gender">
-                                            <option value="男">男</option>
-                                            <option value="女">女</option>
-                                            </select>
-                    </td>
-                    <td class="title">民族<br />Race</td>
-                    <td><select class="form-control" name="Race">
-                        <option value="汉">汉</option>
-                        <option value="满">满</option>
-                        </select>
-                    </td>
-                    <td class="title">出生日期 <span class="text-danger">*</span><br />Birthday</td>
-                    <td><input type="text" class="form-control" /></td>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.form)">
+        <div class="box box-success">
+            <div class="box-body">
+                <table class="form-table edit">
+                    <caption>
+                        基本信息 <br /> Personal Information
+                    </caption>
+                    <tr>
+                        <td class="title">
+                            中文名 <span class="text-danger">*</span><br /> Chinese Name
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="ChineseName" [(ngModel)]="employee.ChineseName" required name="ChineseName" #ChineseName="ngModel"
+                            />
+                            <div class="alert alert-danger" *ngIf="ChineseName.touched && !ChineseName.valid">Chinese Name is required.</div>
+                        </td>
+                        <td class="title">
+                            英文名<br /> English Name
+                        </td>
+                        <td>
+                            <input type="text" class="form-control" id="EnglishName" [(ngModel)]="employee.EnglishName" #englishName="ngModel" name="EnglishName"
+                                required/>
+                            <div class="alert alert-danger" *ngIf="englishName.touched && !englishName.valid">English Name is required.</div>
+                        </td>
 
-                </tr>
-                <tr>
-                    <td class="title">证件类型<br />ID Type</td>
-                    <td>
-                        <select class="form-control" name="IDType">
+                        <td class="title">
+                            性别<br /> Gender
+                        </td>
+                        <td>
+                            <select class="form-control" name="Gender" id="Gender" [(ngModel)]="employee.Gender">
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </td>
+                        <td class="title">民族<br />Race</td>
+                        <td>
+                            <select class="form-control" name="Race" id="Race" [(ngModel)]="employee.Race">
+                                <option value="汉">汉</option>
+                                <option value="满">满</option>
+                            </select>
+                        </td>
+                        <td class="title">出生日期 <span class="text-danger">*</span><br />Birthday</td>
+                        <td>
+                            <input type="text" class="form-control" [(ngModel)]="employee.Birthday" name="Birthday" #birthday="ngModel" required/>
+                            <div class="alert alert-danger" *ngIf="birthday.touched && !birthday.valid">Birthday is required.</div>
+
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="title">证件类型<br />ID Type</td>
+                        <td>
+                            <select class="form-control" name="IdType" [(ngModel)]="employee.IdType">
                             <option value="居民身份证">居民身份证</option>
                             <option value="港澳通行证">港澳通行证</option>
                             <option value="护  照">护  照</option>
                             <option value="台胞证">台胞证</option>
                         </select>
-                    </td>
-                    <td class="title">证件号码 <span class="text-danger">*</span><br />ID Number</td>
-                    <td colspan="3"><input type="text" class="form-control" /></td>
+                        </td>
+                        <td class="title">证件号码 <span class="text-danger">*</span><br />ID Number</td>
+                        <td colspan="3"><input type="text" class="form-control" [(ngModel)]="employee.IdNumber" name="IdNumber" /></td>
 
-                    <td class="title">婚姻状况<br />Marrial Status</td>
-                    <td>
-                        <select class="form-control" name="MarrialStatus">
+                        <td class="title">婚姻状况<br />Marrial Status</td>
+                        <td>
+                            <select class="form-control" name="MarialStatus" [(ngModel)]="MarialStatus">
                                                 <option value="已婚">已婚</option>
                                                 <option value="未婚">未婚</option>
                                             </select>
-                    </td>
-                    <td class="title">户口性质<br />Recidence Type</td>
-                    <td>
-                        <select class="form-control" name="RecidenceType">
+                        </td>
+                        <td class="title">户口性质<br />Recidence Type</td>
+                        <td>
+                            <select class="form-control" name="RecidenceType" [(ngModel)]="employee.RecidenceType">
                                                 <optgroup label="本市">
                                                     <option value="本市城镇">城镇</option>
                                                     <option value="本市农村">农村</option>
@@ -68,51 +81,53 @@
                                                     <option value="外埠农村">农村</option>
                                                 </optgroup>
                                             </select>
-                    </td>
-                </tr>
-                <tr>
+                        </td>
+                    </tr>
+                    <tr>
 
-                    <td class="title">政治面貌<br />Political Landscape</td>
-                    <td>
-                        <select class="form-control" name="PoliticalLandscape">
+                        <td class="title">政治面貌<br />Political Landscape</td>
+                        <td>
+                            <select class="form-control" name="PoliticalLandscape" [(ngModel)]="employee.PoliticalLandscape">
                                                 <option value="中共党员">中共党员</option>
                                                 <option value="预备党员">预备党员</option>
                                                 <option value="共青团员">共青团员</option>
                                                 <option value="一般群众">一般群众</option>
                                             </select>
-                    </td>
-                    <td class="title">最高学历<br />Education</td>
-                    <td>
-                        <select class="form-control" name="Education">
+                        </td>
+                        <td class="title">最高学历<br />Education</td>
+                        <td>
+                            <select class="form-control" name="Education" [(ngModel)]="employee.Education">
                                                 <option value="硕士">硕士</option>
                                                 <option value="博士">博士</option>
                                                 <option value="本科">本科</option>
                                                 <option value="专科">专科</option>
                                                 <option value="高中及以下">高中及以下</option>
                                             </select>
-                    </td>
-                    <td class="title" colspan="2">首次参加工作时间 <span class="text-danger">*</span><br />Date of working</td>
-                    <td><input type="text" class="form-control" /></td>
+                        </td>
+                        <td class="title" colspan="2">首次参加工作时间 <span class="text-danger">*</span><br />Date of working</td>
+                        <td><input type="text" class="form-control" name="DateOfWorking" [(ngModel)]="employee.DateOfWorking"
+                            /></td>
 
 
-                    <td class="title">私人邮箱 <span class="text-danger">*</span><br />Personal Email</td>
-                    <td colspan="2"><input type="text" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td class="title">手机 <span class="text-danger">*</span><br />Mobile</td>
-                    <td><input type="text" class="form-control" /></td>
-                    <td class="title" colspan="4">
-                        是否拥有国外永久居留权（绿卡）<br />Greed Card
-                    </td>
-                    <td>
-                        <select class="form-control" name="GreedCard">
+                        <td class="title">私人邮箱 <span class="text-danger">*</span><br />Personal Email</td>
+                        <td colspan="2"><input type="text" class="form-control" name="PersonalEmail" [(ngModel)]="employee.PersonalEmail"
+                            /></td>
+                    </tr>
+                    <tr>
+                        <td class="title">手机 <span class="text-danger">*</span><br />Mobile</td>
+                        <td><input type="text" class="form-control" name="Mobile" [(ngModel)]="employee.Mobile" /></td>
+                        <td class="title" colspan="4">
+                            是否拥有国外永久居留权（绿卡）<br />Greed Card
+                        </td>
+                        <td>
+                            <select class="form-control" name="HasGreenCard" [(ngModel)]="employee.HasGreenCard">
                                                 <option value="false">否</option>
                                                 <option value="true">是</option>
                                             </select>
-                    </td>
-                    <td class="title">招聘渠道 <span class="text-danger">*</span><br />Recruiting Channel</td>
-                    <td colspan="2">
-                        <select class="form-control" name="RecruitingChannel">
+                        </td>
+                        <td class="title">招聘渠道 <span class="text-danger">*</span><br />Recruiting Channel</td>
+                        <td colspan="2">
+                            <select class="form-control" name="RecruitingChannel" [(ngModel)]="employee.RecruitingChannel">
                                                 <option value="">--------</option>
                                                 <option value="招聘网站" selected>招聘网站</option>
                                                 <option value="人才市场">人才市场</option>
@@ -121,61 +136,68 @@
                                                 <option value="报刊广告">报刊广告</option>
                                             </select>
 
-                        <label class="checkbox-inline">
+                            <label class="checkbox-inline">
                                                 <input type="checkbox" />内部推荐
                                             </label>
-                        <input type="text" class="form-control" placeholder="姓名" />
-                    </td>
-                </tr>
+                            <input type="text" class="form-control" placeholder="姓名" />
+                        </td>
+                    </tr>
 
-                <tr>
-                    <td class="title">户口居住地 <span class="text-danger">*</span><br />Recidence Address</td>
-                    <td colspan="7"><input type="text" class="form-control" /></td>
-                    <td class="title">邮编 <span class="text-danger">*</span><br />Postal Code</td>
-                    <td><input type="text" class="form-control" /></td>
-                </tr>
-                <tr>
-                    <td class="title">现居住地 <span class="text-danger">*</span><br />Now Address</td>
-                    <td colspan="7"><input type="text" class="form-control" /></td>
-                    <td class="title">邮编 <span class="text-danger">*</span><br />Postal Code</td>
-                    <td><input type="text" class="form-control" /></td>
-                </tr>
-                <tr>
+                    <tr>
+                        <td class="title">户口居住地 <span class="text-danger">*</span><br />Recidence Address</td>
+                        <td colspan="7">
+                            <input type="text" class="form-control" name="RecidenceLocation" [(ngModel)]="employee.RecidenceLocation" />
+                        </td>
+                        <td class="title">邮编 <span class="text-danger">*</span><br />Postal Code</td>
+                        <td><input type="text" class="form-control" name="RecidenceZipCode" [(ngModel)]="employee.RecidenceZipCode"
+                            /></td>
+                    </tr>
+                    <tr>
+                        <td class="title">现居住地 <span class="text-danger">*</span><br />Now Address</td>
+                        <td colspan="7">
+                            <input type="text" class="form-control" name="LivingLocation" [(ngModel)]="employee.LivingLocation" />
+                        </td>
+                        <td class="title">邮编 <span class="text-danger">*</span><br />Postal Code</td>
+                        <td>
+                            <input type="text" class="form-control" name="LivingZipCode" [(ngModel)]="employee.LivingZipCode"/>
+                        </td>
+                    </tr>
+                    <tr>
 
-                    <td class="title" colspan="2">是否有亲属目前在宜信工作</td>
-                    <td colspan="8">
-                        <table style="border-width:0px;">
-                            <tr>
-                                <td style="vertical-align:top;border:0px">
-                                    <div class="col-xs-12 radio">
-                                        <label><input type="radio" name="RelativeInYiXin" checked value="false" /> 否</label>
-                                    </div>
-                                </td>
-                                <td style="vertical-align:top;border:0px">
-                                    <div class="col-xs-2 radio">
-                                        <label><input type="radio" name="RelativeInYiXin" value="true" /> 是</label>
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <input type="text" class="form-control" placeholder="姓名" />
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <input type="text" class="form-control" placeholder="部门" />
-                                    </div>
-                                    <div class="col-xs-3">
-                                        <input type="text" class="form-control" placeholder="职务" />
-                                    </div>
-                                </td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-            </table>
+                        <td class="title" colspan="2">是否有亲属目前在宜信工作</td>
+                        <td colspan="8">
+                            <table style="border-width:0px;">
+                                <tr>
+                                    <td style="vertical-align:top;border:0px">
+                                        <div class="col-xs-12 radio">
+                                            <label><input type="radio" name="RelativeInYiXin" checked value="false" /> 否</label>
+                                        </div>
+                                    </td>
+                                    <td style="vertical-align:top;border:0px">
+                                        <div class="col-xs-2 radio">
+                                            <label><input type="radio" name="RelativeInYiXin" value="true" /> 是</label>
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" placeholder="姓名" />
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" placeholder="部门" />
+                                        </div>
+                                        <div class="col-xs-3">
+                                            <input type="text" class="form-control" placeholder="职务" />
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="box-footer">
+                <button class="btn btn-primary" id="submit" type="submit">保 存</button>
+            </div>
         </div>
-
-        <div class="box-footer">
-            <button class="btn btn-primary" id="submit">保 存</button>
-        </div>
-    </div>
-
+    </form>
 </div>
 <!-- /.col -->

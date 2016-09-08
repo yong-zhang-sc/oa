@@ -12,12 +12,14 @@ var core_1 = require('@angular/core');
 var router_1 = require('@angular/router');
 var employee_service_1 = require('./employee.service');
 var communication_service_1 = require('../communication.service');
+var message_service_1 = require('../message.service');
 var EmployeeOverviewEditComponent = (function () {
-    function EmployeeOverviewEditComponent(route, router, _employeeService, _communicationService) {
+    function EmployeeOverviewEditComponent(route, router, _employeeService, _communicationService, _messageService) {
         this.route = route;
         this.router = router;
         this._employeeService = _employeeService;
         this._communicationService = _communicationService;
+        this._messageService = _messageService;
         this.employee = {};
         this.employeeId = 0;
     }
@@ -31,12 +33,21 @@ var EmployeeOverviewEditComponent = (function () {
             });
         });
     };
+    EmployeeOverviewEditComponent.prototype.onSubmit = function (form) {
+        console.log(form);
+        if (form.errors) {
+            this._messageService.announceEmployeeChanged({ type: 'warning', message: '您提交的数据不正确' });
+            return;
+        }
+        var newObj = {};
+        Object.assign(newObj, form.value);
+    };
     EmployeeOverviewEditComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',
             templateUrl: './app/hr/employeeOverview.edit.hr.component.html'
         }), 
-        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, employee_service_1.EmployeeService, communication_service_1.CommunicationService])
+        __metadata('design:paramtypes', [router_1.ActivatedRoute, router_1.Router, employee_service_1.EmployeeService, communication_service_1.CommunicationService, message_service_1.MessageService])
     ], EmployeeOverviewEditComponent);
     return EmployeeOverviewEditComponent;
 }());

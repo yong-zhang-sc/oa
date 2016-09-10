@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var http_1 = require('@angular/http');
 var forms_1 = require('@angular/forms');
+var ng2_bootstrap_1 = require('ng2-bootstrap/ng2-bootstrap');
 var app_component_1 = require('./app.component');
 var message_component_1 = require('./message.component');
 var login_component_1 = require('./login.component');
@@ -30,7 +31,8 @@ var employeeTraining_hr_component_1 = require('./hr/employeeTraining.hr.componen
 var employeeContact_hr_component_1 = require('./hr/employeeContact.hr.component');
 var employeeSkills_hr_component_1 = require('./hr/employeeSkills.hr.component');
 var employeeOverview_edit_hr_component_1 = require('./hr/employeeOverview.edit.hr.component');
-var filterByKeyword_pipe_1 = require('./hr/filterByKeyword.pipe');
+var filterByKeyword_pipe_1 = require('./filters/filterByKeyword.pipe');
+var emailPrefix_pipe_1 = require('./filters/emailPrefix.pipe');
 // import {HRModule} from './hr/hr.module';
 var app_routing_1 = require('./app.routing');
 var communication_service_1 = require('./communication.service');
@@ -42,7 +44,7 @@ var AppModule = (function () {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, forms_1.FormsModule],
+            imports: [platform_browser_1.BrowserModule, app_routing_1.routing, http_1.HttpModule, forms_1.FormsModule, ng2_bootstrap_1.Ng2BootstrapModule],
             declarations: [
                 app_component_1.AppComponent,
                 message_component_1.MessageComponent,
@@ -62,7 +64,8 @@ var AppModule = (function () {
                 employeeContact_hr_component_1.EmployeeContactComponent,
                 employeeSkills_hr_component_1.EmployeeSkillsComponent,
                 employeeOverview_edit_hr_component_1.EmployeeOverviewEditComponent,
-                filterByKeyword_pipe_1.FilterByKeywordsPipe
+                filterByKeyword_pipe_1.FilterByKeywordsPipe,
+                emailPrefix_pipe_1.EmailPrefixPipe
             ],
             bootstrap: [app_component_1.AppComponent, message_component_1.MessageComponent],
             providers: [login_service_1.LoginService, employee_service_1.EmployeeService, communication_service_1.CommunicationService, message_service_1.MessageService]

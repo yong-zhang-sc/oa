@@ -4,4 +4,6 @@ import { Component } from '@angular/core';
     selector: 'home-sidebar',
     templateUrl: './app/home/sidebar.component.html'
 })
-export class SidebarComponent { }
+export class SidebarComponent { 
+
+}

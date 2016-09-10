@@ -2,26 +2,23 @@
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-               <!-- Sidebar Menu -->
-        <ul class="sidebar-menu">
-            <li class="header">功能菜单</li>
-            <!-- Optionally, you can add icons to the links -->
-            <li>
-                <a routerLink="/home/dashboard"><i class="fa fa-user"></i> <span>个人面板</span></a>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-users"></i> <span>人事</span>
-                    <span class="pull-right-container">
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </span>
-                </a>
+
+        <accordion [closeOthers]="true">
+            <accordion-group heading='个人面板' [isOpen]="false" [isDisabled]="false" class="navboard">
+                <li>
+                    <a routerLink="/home/dashboard"><i class="fa fa-user"></i> <span>个人面板</span></a>
+                </li>
+            </accordion-group>
+
+            <accordion-group heading='人事管理' [isOpen]="false" [isDisabled]="false" class="navHR">
                 <ul class="treeview-menu">
-                    <li><a  routerLink="/home/hr">员工档案</a></li>
+                    <li><a routerLink="/home/hr">员工档案</a></li>
+                    <li><a routerLink="/home/hr">办理入职</a></li>
+                    
                 </ul>
-            </li>
-        </ul>
-        <!-- /.sidebar-menu -->
+            </accordion-group>
+        </accordion>
+
     </section>
     <!-- /.sidebar -->
 </aside>

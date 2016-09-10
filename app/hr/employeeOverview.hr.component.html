@@ -1,11 +1,13 @@
+<div class="col-md-2">
+    <employee-profile [employee]="employee"></employee-profile>
+</div>
 
-
-<div class="col-md-10">
+<div class="col-md-8">
     <div style="margin-top:-40px;height:40px;"><a routerLink="/home/hr/employees">返回到列表</a> </div>
     <div class="box box-success">
         <div class="box-body">
             <table class="form-table">
-                <caption>基本信息 <br /> Personal Information</caption>             
+                <caption>基本信息 <br /> Personal Information</caption>
                 <tr>
                     <td class="title">中文名<br /> Chinese Name
                     </td>
@@ -42,7 +44,7 @@
                     </td>
                     <td *ngIf="employee.HasGreenCard">是</td>
                     <td *ngIf="!employee.HasGreenCard">否</td>
-                    
+
                 </tr>
                 <tr>
                     <td class="title">手机<br />Mobile</td>

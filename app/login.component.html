@@ -1,28 +1,33 @@
 <div class="login-box">
-    <div class="login-logo">
-        Smart Office <br /> 好望角智能办公平台
+    <div class="login-logo"><strong>
+         <p>Smart Office 好望角智能办公平台</p>
+        </strong>
     </div>
     <!-- /.login-logo -->
-    <div class="login-box-body">
-        <p class="login-box-msg">智能化办公从这里开始</p>
-        <form>
-            <div class="form-group has-feedback">
-                <input type="text" class="form-control" placeholder="邮箱/手机/姓名" #email />
-                <span class="fa fa-user form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="密码" #password />
-                <span class="fa fa-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-primary btn-block btn-flat" (click)="login(email.value, password.value)">登 录</button>
-            </div>
-            <div class="form-group">
-                <strong>登录不了？</strong>
-                <i class="fa fa-info-circle"></i> 你可以联系 <a href="mailto:hr@goodhopevisa.com" class="text-primary">HR</a>
-            </div>
-        </form>
+    <div class="login-container">
+        <div class="login-box-body">
+            <!--<p class="login-box-msg">智能化办公从这里开始</p>-->
+            <form>
+                <div class="form-group has-feedback">
+                    <input type="text" class="form-control" placeholder="邮箱/手机/姓名" #email />
+                    <span class="fa fa-user form-control-feedback"></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <input type="password" class="form-control" placeholder="密码" #password />
+                    <span class="fa fa-lock form-control-feedback"></span>
+                </div>
+                <div class="form-group">
+                    <button type="button" class="btn btn-primary btn-block btn-flat" (click)="login(email.value, password.value)">登 录</button>
+                </div>
+              
+            </form>
 
-        <div class="text-center text-muted">好望角 &copy; 2016 V1.0</div>
+        </div>
     </div>
+    <div class="form-group" style="text-align:right;">
+        <strong>登录不了？</strong>
+        <i class="fa fa-info-circle"></i> 你可以联系 <a href="mailto:hr@goodhopevisa.com" class="text-primary">HR</a>
+    </div>
+            <div class="text-center text-muted">好望角 &copy; 2016 V1.0</div>
+    
 </div>

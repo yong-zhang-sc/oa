@@ -1,56 +1,41 @@
 <div class="col-md-10">
     <div class="box  collapsed-box">
+
         <div class="box-header">
+
+            <div class="status-bar">
+                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 0, 'btn-default' : status !=0 }">未入职</button>
+                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 1, 'btn-default' : status !=1 }">试用期</button>
+                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 2, 'btn-default' : status !=2 }">转 正</button>
+                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 3, 'btn-default' : status !=3 }">离 职</button>
+            </div>
             <div class="row">
-                <div class="col-md-1">
+                <!--<div class="col-md-1">
                     <a href="#" title="新增员工"><i class="fa fa-3x fa-plus-square"></i></a>
-                </div>
+                </div>-->
                 <div class="col-md-10">
-                    <div class="input-group input-group-lg">
+                    <div class="input-group input-group-lg search-bar">
                         <span class="input-group-addon">
                                                     <i class="fa fa-search"></i>
                                                 </span>
-                        <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" [value]="keyword" (input)="keyword=$event.target.value"/>
-                        <div class="input-group-btn">
+                        <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" [value]="keyword" (input)="keyword=$event.target.value"
+                        />
+                        <!--<div class="input-group-btn">
                             <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> 导出</button>
-                        </div>
+                        </div>-->
                     </div>
                 </div>
-                <div class="col-md-1">
+                <!--<div class="col-md-1">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-placement="bottom" data-toggle="tooltip" title="高级搜索">
                                             <i class="fa fa-3x  fa-angle-double-down"></i>
                                         </button>
-                </div>
+                </div>-->
             </div>
         </div>
-        <div class="box-body">
-            <div class="panel panel-default">
-                <div class="panel-body">
-
-                    <div class="form-inline">
-                        <label class="control-label">
-                                                入职时间：
-                                            </label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" /> ----
-                            <input type="text" class="form-control" />
-                        </div>
-                        <div class="form-group">
-                            <div class="checkbox">
-                                <label>
-                                                        <input type="checkbox" /> 只看在职
-                                                    </label>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
+        <div style="height:30px;"></div>
         <div class="row">
             <div class="col-md-12">
-                <table class="table table-responsive table-hover" id="staff-table">
+                <table class="table table-striped" id="staff-table">
                     <thead>
                         <tr>
                             <th>姓名</th>
@@ -59,33 +44,21 @@
                             <th>职务</th>
                             <th>部门</th>
                             <th>入职时间</th>
-                            <th>入职状态</th>
-                            <th></th>
+                            <!--<th>入职状态</th>-->
+
                         </tr>
                     </thead>
                     <tbody>
                         <tr *ngFor="let employee of (_employeeList | filterByKeywords:keyword)" (click)="selectEmployee(employee)">
                             <td>{{employee.LoginName}}</td>
-                            <td>{{employee.Email}}</td>
+                            <td><a class="pull-right" data-toggle="tooltip" title="{{employee.Email}}" href="mailto:{{employee.Email}}">{{employee.Email | emailPrefix}}</a></td>
                             <td>{{employee.Mobile}}</td>
                             <td>{{employee.JobTitle}}</td>
                             <td>{{employee.Organization}}</td>
                             <td>{{employee.EntryDate | date:'y-MM-dd'}}</td>
-                            <td><span class="label label-warning">{{employee.Status}}</span></td>
-                            <td>
-                                <div class="btn-group">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                            操作 <span class="caret"></span>
-                                                        </a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-eye"></i> 预览</a></li>
-                                        <li><a href="#"><i class="fa fa-pencil-square-o"></i> 编辑</a></li>
-                                        <li><a href="#"><i class="fa fa-sign-out"></i> 手动离职</a></li>
-                                    </ul>
-                                </div>
-                            </td>
+                            <!--<td><span class="label label-warning">{{employee.Status}}</span></td>                           -->
                         </tr>
-                       
+
                     </tbody>
                 </table>
             </div>

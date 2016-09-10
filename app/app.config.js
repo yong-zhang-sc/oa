@@ -2,7 +2,7 @@
 var Config = (function () {
     function Config() {
     }
-    Config.url = 'http://localhost/SmartOffice.GCenter/';
+    Config.url = 'http://10.106.29.35:90/API/';
     return Config;
 }());
 exports.Config = Config;

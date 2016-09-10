@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var app_config_1 = require('../app.config');
+var Rx_1 = require('rxjs/Rx');
 require('rxjs/add/operator/map');
 var EmployeeService = (function () {
     function EmployeeService(http) {
@@ -21,9 +22,95 @@ var EmployeeService = (function () {
         console.log(url);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get(url, options).map(function (res, idx) {
-            return res.json();
+        // return Observable.create()
+        return Rx_1.Observable.create(function (observer) {
+            observer.next([{
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }, {
+                    AccountId: 1,
+                    LoginName: '王重阳',
+                    Email: 'chongyang.wang@quanzhen.com',
+                    Mobile: 18888888888,
+                    JobTitle: '掌门',
+                    Organization: '全真教',
+                    EntryDate: '1662/10/25',
+                    Status: '在职'
+                }]);
+            observer.complete();
         });
+        // return this.http.get(url, options).map(function (res, idx) {
+        //     return res.json();
+        // });
     };
     EmployeeService.prototype.getEmployeeById = function (Id) {
         // todo
@@ -31,7 +118,18 @@ var EmployeeService = (function () {
         console.log(url);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.get(url, options).map(function (res) { return res.json().data; });
+        return Rx_1.Observable.from([{
+                AccountId: 1,
+                LoginName: '王重阳',
+                Email: 'chongyang.wang@quanzhen.com',
+                Mobile: 18888888888,
+                JobTitle: '掌门',
+                Organization: '全真教',
+                EntryDate: '1662/10/25',
+                Status: '在职',
+                Leader: 'xxxx'
+            }]);
+        // return this.http.get(url, options).map(res => res.json().data);
     };
     EmployeeService.prototype.updateEmployee = function (employee) {
         var url = app_config_1.Config.url + "api/staff/info";

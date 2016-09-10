@@ -18,6 +18,7 @@ var EmployeeListComponent = (function () {
         this._communicationService = _communicationService;
         this._router = _router;
         this.keyword = '';
+        this.status = 0;
     }
     EmployeeListComponent.prototype.ngOnInit = function () {
         this._communicationService.announceEmployeeChanged(0);
@@ -25,6 +26,10 @@ var EmployeeListComponent = (function () {
             console.log(res);
             this._employeeList = res;
         }).bind(this));
+    };
+    EmployeeListComponent.prototype.selectStatus = function (status) {
+        // if(status == 0){}
+        this.status = status;
     };
     EmployeeListComponent.prototype.selectEmployee = function (employee) {
         console.log('announcing ' + JSON.stringify(employee));

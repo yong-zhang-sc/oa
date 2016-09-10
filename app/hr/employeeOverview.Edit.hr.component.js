@@ -34,13 +34,15 @@ var EmployeeOverviewEditComponent = (function () {
         });
     };
     EmployeeOverviewEditComponent.prototype.onSubmit = function (form) {
-        console.log(form);
+        console.log(form.value);
         if (form.errors) {
             this._messageService.announceEmployeeChanged({ type: 'warning', message: '您提交的数据不正确' });
             return;
         }
-        var newObj = {};
+        //clone employee to avoid unecessary refresh
+        var newObj = JSON.parse(JSON.stringify(this.employee));
         Object.assign(newObj, form.value);
+        this._employeeService.updateEmployee(newObj).subscribe(function (data) { return console.log(data); });
     };
     EmployeeOverviewEditComponent = __decorate([
         core_1.Component({

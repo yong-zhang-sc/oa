@@ -1,63 +1,41 @@
-<div class="col-md-2">
-    <!-- Profile Image -->
-    <div class="box box-primary" *ngIf="!selectedEmployeeId">
-        <div class="box-body">
-            <img class="profile-user-img img-responsive" src="/content/Images/avatar_default.jpg" alt="User profile picture">
 
-            <h5 class="text-center">
-                请从右边选择一个需要管理的员工
-            </h5>
+ <!--Profile Image  -->
+<div class="box box-primary" >
+    <div class="box-body">
+        <img class="profile-user-img img-responsive" src="/content/Images/cab1121e8b3320e82430d87e8c56a1c7.jpg" alt="{{employee.LoginName}}"
+            style="width:100%;">
+
+       <!--<h3 class="profile-username text-center"><strong>{{employee.LoginName}}</strong></h3>-->
+
+        <!--<ul class="list-group list-group-unbordered">        
+            <li class="list-group-item">
+                <b>职务</b> <a class="pull-right">{{employee.JobTitle}}</a>
+            </li>
+            <li class="list-group-item">
+                <b>部门</b> <a class="pull-right">{{employee.Organization}}</a>
+            </li>
+            <li class="list-group-item">
+                <b>直属领导</b> <a class="pull-right">{{employee.Leader}}</a>
+            </li>
+        </ul>-->
+
+        <div class="text-center">            
+            <a routerLink="/home/hr/overviewEdit/{{employee.AccountId}}" class="btn btn-primary btn-lg active" role="button">编 辑</a>
         </div>
-        <!-- /.box-body -->
+
     </div>
-    <!-- /.box -->
-
-    <!-- Profile Image -->
-    <div class="box box-primary" *ngIf="selectedEmployeeId">
-        <div class="box-body">
-            <img class="profile-user-img img-responsive" src="/content/Images/cab1121e8b3320e82430d87e8c56a1c7.jpg" alt="{{employee.LoginName}}"
-                style="width:100%;">
-
-            <h3 class="profile-username text-center"><strong>{{employee.LoginName}}</strong></h3>
-
-            <ul class="list-group list-group-unbordered">
-                <li class="list-group-item">
-                    <b>邮箱</b> <a class="pull-right" data-toggle="tooltip" title="{{employee.Email}}" href="mailto:{{employee.Email}}">{{emailPrefix}}</a>
-                </li>
-                <li class="list-group-item">
-                    <b>手机号</b> <a class="pull-right">{{employee.Mobile}}</a>
-                </li>
-                <li class="list-group-item">
-                    <b>职务</b> <a class="pull-right">{{employee.JobTitle}}</a>
-                </li>
-                <li class="list-group-item">
-                    <b>部门</b> <a class="pull-right">{{employee.Organization}}</a>
-                </li>
-                <li class="list-group-item">
-                    <b>直属领导</b> <a class="pull-right">{{employee.Leader}}</a>
-                </li>
-            </ul>
-
-            <div class="text-center">
-                <a href="#" class="btn btn-warning" data-toggle="tooltip" title="更新账号"><i class="fa fa-pencil-square-o"></i> <b>账号</b></a>
-                <a routerLink="/home/hr/overviewEdit/{{selectedEmployeeId}}" class="btn btn-success" data-toggle="tooltip" title="更新档案"><i class="fa fa-pencil-square-o"></i> <b>档案</b></a>
-                <a href="#" class="btn btn-primary" data-toggle="tooltip" title="更新头像"><i class="fa fa-pencil-square-o"></i> <b>头像</b></a>
-            </div>
-
-        </div>
-        <!-- /.box-body -->
-    </div>
-    <!-- /.box -->
-    <div class="box box-warning" *ngIf="selectedEmployeeId">
-        <div class="box-body">
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a routerLink="overview/{{selectedEmployeeId}}">基本信息</a></li>
-                <li><a routerLink="education/{{selectedEmployeeId}}">学历信息</a></li>
-                <li><a routerLink="workExperience/{{selectedEmployeeId}}">工作经历</a></li>
-                <li><a routerLink="training/{{selectedEmployeeId}}">培训经历</a></li>
-                <li><a routerLink="contract/{{selectedEmployeeId}}">紧急联系人</a></li>
-                <li><a routerLink="skills/{{selectedEmployeeId}}">语种</a></li>
-            </ul>
-        </div>
+    <!-- /.box-body -->
+</div>
+<!-- /.box -->
+<div class="box box-warning">
+    <div class="box-body">
+        <ul class="nav nav-pills nav-stacked">
+            <li class="active"><a routerLink="overview/{{employee.AccountId}}">基本信息</a></li>
+            <li><a routerLink="education/{{employee.AccountId}}">学历信息</a></li>
+            <li><a routerLink="workExperience/{{employee.AccountId}}">工作经历</a></li>
+            <li><a routerLink="training/{{employee.AccountId}}">培训经历</a></li>
+            <li><a routerLink="contract/{{employee.AccountId}}">紧急联系人</a></li>
+            <li><a routerLink="skills/{{employee.AccountId}}">语种</a></li>
+        </ul>
     </div>
 </div>

@@ -1,10 +1,70 @@
-﻿html, body { font-family: 'Microsoft YaHei','Microsoft YaHei UI'; }
+﻿html, body { font-family: 'Microsoft YaHei','Microsoft YaHei UI';  }
 
 
-.form-table { font-size: 16px; border-left: #ccc solid 1px; border-bottom: #ccc solid 1px; width: 100%; }
+/*.form-table { font-size: 16px; border-left: #ccc solid 1px; border-bottom: #ccc solid 1px; width: 100%; }
     .form-table caption { background-color: #000000; font-size: 20px; font-weight: bold; color: white; text-align: center; }
     .form-table td,th { border-color: #000000; border-width: 2px; vertical-align: middle; padding-top: 22px; padding-bottom: 22px; padding-right: 10px; padding-left: 10px; border-right: #ccc solid 1px; border-top: #ccc solid 1px; min-width: 100px; }
 
         .form-table td.title { font-weight: bold; width: 150px; text-align: center; }
     .form-table.edit input[type=text] { border-width:0px;border-bottom:1px solid #ccc;font-size:16px; }
 
+    .content-header>.breadcrumb{float:none;position: static;font-size:1.2em;}*/
+
+    .login-box { 
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        height : 513px;;
+        width:996px;
+      
+    }
+.login-container{
+  background-image: url('images/co.jpg');
+       background-repeat:no-repeat;
+       background-position:center;
+        height : 413px;;
+        width:996px;
+        position:static;
+}
+    .login-box-body{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+        width : 300px;
+        height: 200px;
+    }
+
+    .login-logo{
+
+        font-size : 1.8em;
+    }
+
+    .main-header nav{float:right;}
+
+    section.sidebar{  width:200px; min-height: 700px; }
+
+    .navboard .panel-heading     {
+        background-image: url('images/dashboard.png');
+        background-repeat:no-repeat;
+        background-position-y:center;        
+       }
+
+       .navboard .panel-heading span{margin-left : 30px;}
+
+          .navHR .panel-heading     {
+        background-image: url('images/user_group.png');
+        background-repeat:no-repeat;
+        background-position-y:center;        
+       }
+
+       .navHR .panel-heading span{margin-left : 30px;}
+
+       .main-sidebar{float:left;}
+       .search-bar{max-width:600px;margin:auto;}
+       .status-bar{margin-top:-20px;margin-bottom:20px;}

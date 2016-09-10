@@ -16,11 +16,11 @@ export class EmployeeOverviewEditComponent implements OnInit {
     employeeId: number = 0;
 
     constructor(
-        private route: ActivatedRoute, 
-        private router: Router, 
-        private _employeeService: EmployeeService, 
+        private route: ActivatedRoute,
+        private router: Router,
+        private _employeeService: EmployeeService,
         private _communicationService: CommunicationService,
-        private _messageService : MessageService) {
+        private _messageService: MessageService) {
 
 
     }
@@ -40,16 +40,18 @@ export class EmployeeOverviewEditComponent implements OnInit {
     }
 
     onSubmit(form: any) {
-        console.log(form);
+        console.log(form.value);
 
-        if(form.errors){
-            this._messageService.announceEmployeeChanged({type : 'warning', message: '您提交的数据不正确'})
+        if (form.errors) {
+            this._messageService.announceEmployeeChanged({ type: 'warning', message: '您提交的数据不正确' })
             return;
         }
 
-        var newObj = {};
+        //clone employee to avoid unecessary refresh
+        var newObj = JSON.parse(JSON.stringify(this.employee));
         Object.assign(newObj, form.value);
 
-        
+        this._employeeService.updateEmployee(newObj).subscribe(data => console.log(data));
+
     }
 }

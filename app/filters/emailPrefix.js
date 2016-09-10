@@ -9,25 +9,28 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var EmployeeProfileComponent = (function () {
-    function EmployeeProfileComponent() {
-        console.log(this.employee);
+/*
+ * Raise the value exponentially
+ * Takes an exponent argument that defaults to 1.
+ * Usage:
+ *   value | exponentialStrength:exponent
+ * Example:
+ *   {{ 2 |  exponentialStrength:10}}
+ *   formats to: 1024
+*/
+var EmailPrefixPipe = (function () {
+    function EmailPrefixPipe() {
     }
-    EmployeeProfileComponent.prototype.ngOnInit = function () {
-        console.log(JSON.stringify(this.employee));
+    EmailPrefixPipe.prototype.transform = function (value) {
+        if (!value)
+            return '';
+        return value.substring(0, value.indexOf('@'));
     };
-    __decorate([
-        core_1.Input(), 
-        __metadata('design:type', Object)
-    ], EmployeeProfileComponent.prototype, "employee", void 0);
-    EmployeeProfileComponent = __decorate([
-        core_1.Component({
-            selector: 'employee-profile',
-            templateUrl: './app/hr/profile.hr.component.html'
-        }), 
+    EmailPrefixPipe = __decorate([
+        core_1.Pipe({ name: 'emailPrefix' }), 
         __metadata('design:paramtypes', [])
-    ], EmployeeProfileComponent);
-    return EmployeeProfileComponent;
+    ], EmailPrefixPipe);
+    return EmailPrefixPipe;
 }());
-exports.EmployeeProfileComponent = EmployeeProfileComponent;
-//# sourceMappingURL=profile.hr.component.js.map
+exports.EmailPrefixPipe = EmailPrefixPipe;
+//# sourceMappingURL=emailPrefix.js.map

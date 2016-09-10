@@ -15,6 +15,7 @@ export class EmployeeListComponent {
     // @Output() onEmployeeSelected = new EventEmitter();
     public _employeeList: Array<any>;
     keyword: string = '';
+    status : number = 0;
 
     constructor(private _employeeService: EmployeeService, private _communicationService: CommunicationService, private _router: Router) {
 
@@ -32,6 +33,10 @@ export class EmployeeListComponent {
         }).bind(this));
     }
 
+    selectStatus(status : number){
+        // if(status == 0){}
+        this.status = status;
+    }
 
     selectEmployee(employee: any) {
 

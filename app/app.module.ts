@@ -2,6 +2,7 @@ import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule }    from '@angular/http';
 import { FormsModule }   from '@angular/forms';
+import { Ng2BootstrapModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AppComponent }  from './app.component';
 import { MessageComponent } from './message.component';
@@ -25,7 +26,8 @@ import { EmployeeContactComponent } from './hr/employeeContact.hr.component';
 import { EmployeeSkillsComponent } from './hr/employeeSkills.hr.component';
 import { EmployeeOverviewEditComponent } from './hr/employeeOverview.edit.hr.component';
 
-import { FilterByKeywordsPipe } from './hr/filterByKeyword.pipe';
+import { FilterByKeywordsPipe } from './filters/filterByKeyword.pipe';
+import { EmailPrefixPipe} from './filters/emailPrefix.pipe';
 
 
 // import {HRModule} from './hr/hr.module';
@@ -38,7 +40,7 @@ import {EmployeeService } from './hr/employee.service';
 import { MessageService, Message } from './message.service';
 
 @NgModule({
-  imports: [BrowserModule, routing, HttpModule,FormsModule],
+  imports: [BrowserModule, routing, HttpModule,FormsModule,Ng2BootstrapModule ],
   declarations: [
     AppComponent,
     MessageComponent,
@@ -58,7 +60,8 @@ import { MessageService, Message } from './message.service';
     EmployeeContactComponent,
     EmployeeSkillsComponent,
     EmployeeOverviewEditComponent,
-    FilterByKeywordsPipe
+    FilterByKeywordsPipe,
+    EmailPrefixPipe
     
   ],
   bootstrap: [AppComponent, MessageComponent],

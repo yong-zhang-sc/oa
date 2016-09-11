@@ -7,21 +7,21 @@
 
        <!--<h3 class="profile-username text-center"><strong>{{employee.LoginName}}</strong></h3>-->
 
-        <!--<ul class="list-group list-group-unbordered">        
+        <ul class="list-group list-group-unbordered">        
             <li class="list-group-item">
                 <b>职务</b> <a class="pull-right">{{employee.JobTitle}}</a>
             </li>
             <li class="list-group-item">
                 <b>部门</b> <a class="pull-right">{{employee.Organization}}</a>
             </li>
-            <li class="list-group-item">
+            <!--<li class="list-group-item">
                 <b>直属领导</b> <a class="pull-right">{{employee.Leader}}</a>
-            </li>
-        </ul>-->
+            </li>-->
+        </ul>
 
-        <div class="text-center">            
+        <!--<div class="text-center">            
             <a routerLink="/home/hr/overviewEdit/{{employee.AccountId}}" class="btn btn-primary btn-lg active" role="button">编 辑</a>
-        </div>
+        </div>-->
 
     </div>
     <!-- /.box-body -->
@@ -30,12 +30,12 @@
 <div class="box box-warning">
     <div class="box-body">
         <ul class="nav nav-pills nav-stacked">
-            <li class="active"><a routerLink="overview/{{employee.AccountId}}">基本信息</a></li>
-            <li><a routerLink="education/{{employee.AccountId}}">学历信息</a></li>
-            <li><a routerLink="workExperience/{{employee.AccountId}}">工作经历</a></li>
-            <li><a routerLink="training/{{employee.AccountId}}">培训经历</a></li>
-            <li><a routerLink="contract/{{employee.AccountId}}">紧急联系人</a></li>
-            <li><a routerLink="skills/{{employee.AccountId}}">语种</a></li>
+            <li class="active"><a routerLink="/home/hr/overview/{{employee.AccountId}}">基本信息</a></li>
+            <li><a routerLink="/home/hr/education/{{employee.AccountId}}">学历信息</a></li>
+            <li><a routerLink="/home/hr/workExperience/{{employee.AccountId}}">工作经历</a></li>
+            <li><a routerLink="/home/hr/training/{{employee.AccountId}}">培训经历</a></li>
+            <li><a routerLink="/home/hr/contract/{{employee.AccountId}}">紧急联系人</a></li>
+            <li><a routerLink="/home/hr/skills/{{employee.AccountId}}">语种</a></li>
         </ul>
     </div>
 </div>

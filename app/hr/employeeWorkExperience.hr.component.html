@@ -1,27 +1,32 @@
+<div class="col-md-2">
+    <employee-profile [employee]="employee"></employee-profile>
+</div>
+
 <!-- /.col -->
-<div class="col-md-10">
-    <div class="box box-success">
-        <div class="box-body">
-            <table class="form-table">
-                <caption>工作经历 <br /> Working Experiences</caption>
-                <tr >
-                    <th>起止时间</th>
-                    <th>公司名称</th>
-                    <th>所属部门</th>
-                    <th>岗位</th>
-                    <th>证明人/电话</th>
-                    <th>离职原因</th>
-                </tr>
-                <tr *ngFor="let wexp of employee.WorkingExperiences">
-                    <td>{{wexp.StartTime | date:'y年M月d日'}} — {{wexp.EndTime | date:'y年M月d日'}}</td>
-                    <td>{{wexp.CompanyName}}</td>
-                    <td>{{wexp.Department}}</td>
-                    <td>{{wexp.Position}}</td>
-                    <td>{{wexp.VouchAndTel}}</td>
-                    <td>{{wexp.LeavingReason}}</td>
-                </tr>              
-            </table>
-        </div>
-    </div>
+<div class="col-md-8">
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>起止时间</th>
+                <th>公司名称</th>
+                <th>所属部门</th>
+                <th>岗位</th>
+                <th>证明人/电话</th>
+                <th>离职原因</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let wexp of employee.WorkingExperiences">
+                <td>{{wexp.StartTime | date:'y年M月d日'}} — {{wexp.EndTime | date:'y年M月d日'}}</td>
+                <td>{{wexp.CompanyName}}</td>
+                <td>{{wexp.Department}}</td>
+                <td>{{wexp.Position}}</td>
+                <td>{{wexp.VouchAndTel}}</td>
+                <td>{{wexp.LeavingReason}}</td>
+            </tr>
+        </tbody>
+    </table>
+
 </div>
 <!-- /.col -->

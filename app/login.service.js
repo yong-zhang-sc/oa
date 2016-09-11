@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var app_config_1 = require('./app.config');
+var Rx_1 = require('rxjs/Rx');
 require('rxjs/add/operator/map');
 var LoginService = (function () {
     function LoginService(http) {
@@ -21,7 +22,10 @@ var LoginService = (function () {
         console.log(url);
         var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         var options = new http_1.RequestOptions({ headers: headers });
-        return this.http.post(url, { Account: account, Password: password }, options).map(function (res) { return res.json(); });
+        return Rx_1.Observable.create(function (observer) {
+            observer.next({ valid: true });
+        });
+        // return this.http.post(url, { Account: account, Password: password }, options).map(res => res.json() );
     };
     LoginService = __decorate([
         core_1.Injectable(), 

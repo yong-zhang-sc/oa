@@ -3,74 +3,46 @@
 </div>
 
 <div class="col-md-8">
-    <div style="margin-top:-40px;height:40px;"><a routerLink="/home/hr/employees">返回到列表</a> </div>
-    <div class="box box-success">
-        <div class="box-body">
-            <table class="form-table">
-                <caption>基本信息 <br /> Personal Information</caption>
-                <tr>
-                    <td class="title">中文名<br /> Chinese Name
-                    </td>
-                    <td>{{employee.ChineseName}}</td>
-                    <td class="title">英文名<br /> English Name
-                    </td>
-                    <td>{{employee.EnglishName}}</td>
-                    <td class="title">性别<br /> Gender
-                    </td>
-                    <td>{{employee.Gender}}</td>
-                    <td class="title">证件类型<br />ID Type</td>
-                    <td>{{employee.IdType}}</td>
-                    <td class="title">证件号码<br />ID Number</td>
-                    <td>{{employee.IdNumber}}</td>
-                </tr>
-                <tr>
-                    <td class="title">出生日期<br />Birthday</td>
-                    <td>{{employee.Birthday | date:'y年M月d日'}}</td>
-                    <td class="title">民族<br />Race</td>
-                    <td>{{employee.Race}}</td>
-                    <td class="title">婚姻状况<br />Marrial Status</td>
-                    <td>{{employee.MarialStatus}}</td>
-                    <td class="title">户口性质<br />Recidence Type</td>
-                    <td>{{employee.RecidenceType}}</td>
-                    <td class="title">政治面貌<br />Political Landscape</td>
-                    <td>{{employee.PoliticalLandscape}}</td>
-                </tr>
-                <tr>
-                    <td class="title">最高学历<br />Education</td>
-                    <td>{{employee.Education}}</td>
-                    <td class="title" colspan="3">首次参加工作时间<br />Date of working</td>
-                    <td>{{employee.DateOfWorking | date:'y年M月d日'}}</td>
-                    <td class="title" colspan="3">是否拥有国外永久居留权（绿卡）<br />Greed Card
-                    </td>
-                    <td *ngIf="employee.HasGreenCard">是</td>
-                    <td *ngIf="!employee.HasGreenCard">否</td>
+    <!--<div style="margin-top:-40px;height:40px;"><a routerLink="/home/hr/employees">返回到列表</a> </div>-->
 
-                </tr>
-                <tr>
-                    <td class="title">手机<br />Mobile</td>
-                    <td>{{employee.Mobile}}</td>
-                    <td class="title">私人邮箱<br />Personal Email</td>
-                    <td colspan="7">{{employee.PersonalEmail}}</td>
-                </tr>
-                <tr>
-                    <td class="title">户口居住地<br />Recidence Address</td>
-                    <td colspan="7">{{employee.RecidenceLocation}}</td>
-                    <td class="title">邮编<br />Postal Code</td>
-                    <td>{{employee.RecidenceZipCode}}</td>
-                </tr>
-                <tr>
-                    <td class="title">现居住地<br />Now Address</td>
-                    <td colspan="7">{{employee.LivingLocation}}</td>
-                    <td class="title">邮编<br />Postal Code</td>
-                    <td>{{employee.LivingZipCode}}</td>
-                </tr>
-                <tr>
-                    <td class="title">招聘渠道<br />Recruiting Channel</td>
-                    <td>{{employee.RecruitingChannel}}</td>
-                    <td class="title" colspan="3">是否有亲属目前在宜信工作</td>
-                    <td colspan="6">{{employee.RelativeInYiXinInfo}}</td>
-                </tr>
-            </table>
+    <div class="container employeeOverview">
+        <div class="row">
+            <div class="col-md-2"><span>中文名 : {{employee.ChineseName}}</span></div>
+            <div class="col-md-2"><span>英文名 : {{employee.EnglishName}}</span></div>
+            <div class="col-md-2"><span>性别 : {{employee.Gender}}</span></div>
+            <div class="col-md-2"><span>民族 : {{employee.Race}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><span>婚姻状况 : {{employee.MarialStatus}} </span></div>
+            <div class="col-md-2"><span>户口性质 : {{employee.RecidenceType}}</span></div>
+            <div class="col-md-2"><span>政治面貌 : {{employee.PoliticalLandscape}}</span></div>
+            <div class="col-md-2"><span>最高学历 : {{employee.Education}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><span>{{employee.IdType}} : {{employee.IdNumber}}</span></div>
+            <div class="col-md-4"><span>出生日期 : {{employee.Birthday | date:'y年M月d日'}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-4"><span>首次参加工作时间 : {{employee.DateOfWorking | date:'y年M月d日'}}</span></div>
+            <div class="col-md-4">是否拥有国外永久居留权（绿卡） : {{employee.HasGreenCard ? '是' : '否'}}</div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <span>手机 : {{employee.Mobile}}</span>
+            </div>
+            <div class="col-md-4"><span>私人邮箱 : {{employee.PersonalEmail}}</span></div>
+        </div>
+        <div class="row">
+            <div class="col-md-8"><span>户口所在地 : {{employee.RecidenceLocation}} <span *ngIf="employee.RecidenceZipCode">({{employee.RecidenceZipCode}})</span></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8"><span>现居住地 : {{employee.LivingLocation}} <span *ngIf="employee.LivingZipCode">({{employee.LivingZipCode}})</span></span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2"><span>招聘渠道 : {{employee.RecruitingChannel}}</span></div>
+            <div class="col-md-6"><span>是否有亲属目前在宜信工作 : {{employee.RelativeInYiXinInfo}}</span></div>
         </div>
     </div>
 </div>

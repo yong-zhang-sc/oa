@@ -30,7 +30,7 @@
         position:static;
 }
     .login-box-body{
-        top: 0;
+        top: 100;
         bottom: 0;
         left: 0;
         right: 0;
@@ -47,7 +47,11 @@
 
     .main-header nav{float:right;}
 
-    section.sidebar{  width:200px; min-height: 700px; }
+.main-sidebar{float:left; width:200px;}
+
+    section.sidebar{  width:200px; }
+
+    .content-wrapper{margin-left: 200px;width: 100%;min-height: 500px;}
 
     .navboard .panel-heading     {
         background-image: url('images/dashboard.png');
@@ -68,3 +72,4 @@
        .main-sidebar{float:left;}
        .search-bar{max-width:600px;margin:auto;}
        .status-bar{margin-top:-20px;margin-bottom:20px;}
+       .employeeOverview .row {margin-bottom: 1.2em;font-size:1.2em;}

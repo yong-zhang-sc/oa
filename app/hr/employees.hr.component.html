@@ -1,71 +1,69 @@
-<div class="col-md-8">
-    <div class="box  collapsed-box">
+<div>
+    <!--class="box  collapsed-box"-->
+    <div class="box-header">
 
-        <div class="box-header">
-
-            <div class="status-bar">
-                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 0, 'btn-default' : status !=0 }" (click)="selectStatus(0)">未入职</button>
-                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 1, 'btn-default' : status !=1 }" (click)="selectStatus(1)">试用期</button>
-                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 2, 'btn-default' : status !=2 }" (click)="selectStatus(2)">转 正</button>
-                <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 3, 'btn-default' : status !=3 }" (click)="selectStatus(3)">离 职</button>
-            </div>
-            <div class="row">
-                <!--<div class="col-md-1">
+        <div class="status-bar">
+            <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 0, 'btn-default' : status !=0 }" (click)="selectStatus(0)">未入职</button>
+            <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 1, 'btn-default' : status !=1 }" (click)="selectStatus(1)">试用期</button>
+            <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 2, 'btn-default' : status !=2 }" (click)="selectStatus(2)">转 正</button>
+            <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 3, 'btn-default' : status !=3 }" (click)="selectStatus(3)">离 职</button>
+        </div>
+        <div class="row">
+            <!--<div class="col-md-1">
                     <a href="#" title="新增员工"><i class="fa fa-3x fa-plus-square"></i></a>
                 </div>-->
-                <div>
-                    <div class="input-group input-group-lg search-bar">
-                        <span class="input-group-addon">
+            <div>
+                <div class="input-group input-group-lg search-bar">
+                    <span class="input-group-addon">
                                                     <i class="fa fa-search"></i>
                                                 </span>
-                        <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" [value]="keyword" (input)="keyword=$event.target.value"
-                        />
-                        <!--<div class="input-group-btn">
+                    <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" [value]="keyword" (input)="keyword=$event.target.value"
+                    />
+                    <!--<div class="input-group-btn">
                             <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> 导出</button>
                         </div>-->
-                    </div>
                 </div>
-                <!--<div class="col-md-1">
+            </div>
+            <!--<div class="col-md-1">
                     <button type="button" class="btn btn-box-tool" data-widget="collapse" data-placement="bottom" data-toggle="tooltip" title="高级搜索">
                                             <i class="fa fa-3x  fa-angle-double-down"></i>
                                         </button>
                 </div>-->
-            </div>
         </div>
-        <div style="height:30px;"></div>
-        <div class="row">
-            <div class="col-md-12">
-                <table class="table table-striped" id="staff-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>姓名</th>
-                            <th>邮箱</th>
-                            <th>手机</th>
-                            <th>职务</th>
-                            <th>部门</th>
-                            <th>入职时间</th>
-                            <!--<th>入职状态</th>-->
+    </div>
+    <div style="height:30px;"></div>
+    <div class="container-fluid">
+        <table class="table table-striped" id="staff-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>姓名</th>
+                    <th>邮箱</th>
+                    <th>手机</th>
+                    <th>职务</th>
+                    <th>部门</th>
+                    <th>入职时间</th>
+                    <!--<th>入职状态</th>-->
 
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let employee of (_employeeList | filterByKeywords:keyword); let i = index" (click)="selectEmployee(employee)">
-                            <td>{{i + 1}}</td>
-                            <td>{{employee.LoginName}}</td>
-                            <td><a class="pull-right" data-toggle="tooltip" title="{{employee.Email}}" href="mailto:{{employee.Email}}">{{employee.Email | emailPrefix}}</a></td>
-                            <td>{{employee.Mobile}}</td>
-                            <td>{{employee.JobTitle}}</td>
-                            <td>{{employee.Organization}}</td>
-                            <td>{{employee.EntryDate | date:'y-MM-dd'}}</td>
-                            <!--<td><span class="label label-warning">{{employee.Status}}</span></td>                           -->
-                        </tr>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let employee of (_employeeList | filterByKeywords:keyword); let i = index" (click)="selectEmployee(employee)">
+                    <td>{{i + 1}}</td>
+                    <td>{{employee.LoginName}}</td>
+                    <td><a class="pull-right" data-toggle="tooltip" title="{{employee.Email}}" href="mailto:{{employee.Email}}">{{employee.Email | emailPrefix}}</a></td>
+                    <td>{{employee.Mobile}}</td>
+                    <td>{{employee.JobTitle}}</td>
+                    <td>{{employee.Organization}}</td>
+                    <td>{{employee.EntryDate | date:'y-MM-dd'}}</td>
+                    <!--<td><span class="label label-warning">{{employee.Status}}</span></td>                           -->
+                </tr>
 
-                    </tbody>
-                </table>
-            </div>
-        </div>
+            </tbody>
+        </table>
     </div>
 
 </div>
+
+
 <!-- /.col -->

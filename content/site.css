@@ -51,7 +51,7 @@
 
     section.sidebar{  width:200px; }
 
-    .content-wrapper{margin-left: 200px;width: 100%;min-height: 500px;}
+    .content-wrapper{min-height: 500px;}
 
     .navboard .panel-heading     {
         background-image: url('images/dashboard.png');
@@ -73,3 +73,6 @@
        .search-bar{max-width:600px;margin:auto;}
        .status-bar{margin-top:-20px;margin-bottom:20px;}
        .employeeOverview .row {margin-bottom: 1.2em;font-size:1.2em;}
+
+       footer {position: fixed;left:0;bottom:0;width:100%;}
+       .main-content{margin-left: 200px;margin-top:50px;padding-left: 50px;}

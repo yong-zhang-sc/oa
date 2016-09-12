@@ -31,4 +31,9 @@ export class EmployeeOverviewComponent implements OnInit {
         });
     }
 
+    edit(){
+
+        this.router.navigate(['/home/hr/overviewEdit/', this.employeeId]);
+    }
+
 }

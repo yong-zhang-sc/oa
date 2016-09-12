@@ -31,6 +31,9 @@ var EmployeeOverviewComponent = (function () {
             });
         });
     };
+    EmployeeOverviewComponent.prototype.edit = function () {
+        this.router.navigate(['/home/hr/overviewEdit/', this.employeeId]);
+    };
     EmployeeOverviewComponent = __decorate([
         core_1.Component({
             //selector: 'employee-profile',

@@ -9,9 +9,6 @@
             <button type="button" class="btn" [ngClass]="{'btn-primary' : status == 3, 'btn-default' : status !=3 }" (click)="selectStatus(3)">离 职</button>
         </div>
         <div class="row">
-            <!--<div class="col-md-1">
-                    <a href="#" title="新增员工"><i class="fa fa-3x fa-plus-square"></i></a>
-                </div>-->
             <div>
                 <div class="input-group input-group-lg search-bar">
                     <span class="input-group-addon">
@@ -19,16 +16,10 @@
                                                 </span>
                     <input type="text" placeholder="邮箱/姓名/手机号" class="form-control" id="search" [value]="keyword" (input)="keyword=$event.target.value"
                     />
-                    <!--<div class="input-group-btn">
-                            <button class="btn btn-success"><i class="fa fa-file-excel-o"></i> 导出</button>
-                        </div>-->
+
                 </div>
             </div>
-            <!--<div class="col-md-1">
-                    <button type="button" class="btn btn-box-tool" data-widget="collapse" data-placement="bottom" data-toggle="tooltip" title="高级搜索">
-                                            <i class="fa fa-3x  fa-angle-double-down"></i>
-                                        </button>
-                </div>-->
+
         </div>
     </div>
     <div style="height:30px;"></div>
